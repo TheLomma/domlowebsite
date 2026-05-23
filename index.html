@@ -3,24 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dominik Lohmar – Zauberer & Mentalist Köln | Firmenfeiern & Hochzeiten</title>
-  <meta name="description" content="Dominik Lohmar – professioneller Zauberer & Mentalist aus Köln. Elegante Close-Up Magic, Parlour Shows und Bühnenshows für Firmenfeiern, Hochzeiten und exklusive Events." />
-  <meta name="keywords" content="Zauberer Köln, Mentalist Köln, Dominik Lohmar, Zauberer Firmenfeier, Zauberer Hochzeit, Close-Up Magic, Mentalismus, Eventzauberer NRW, Zaubershow" />
-  <meta name="author" content="Dominik Lohmar" />
-  <meta name="robots" content="index, follow" />
+  <title>Dominik Lohmar – Zauberer & Mentalist Köln</title>
+  <meta name="description" content="Dominik Lohmar – professioneller Zauberer & Mentalist aus Köln für Firmenfeiern, Hochzeiten und Events." />
   
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Dominik Lohmar – Zauberer & Mentalist" />
-  <meta property="og:description" content="Elegante Zauberkunst und Mentalismus für stilvolle Firmenfeiern, Hochzeiten und Events." />
-  <meta property="og:image" content="https://image.jimcdn.com/app/cms/image/transf/dimension=2000x1500:format=jpg/path/s8d2ea14161653659/backgroundarea/i484c85f107a71160/version/1509568087/image.jpg" />
-  <meta property="og:url" content="https://www.dominiklohmar.de" />
-  <meta property="og:locale" content="de_DE" />
-
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" />
   
   <style>
-    /* === Dein komplettes Original-CSS (leicht erweitert) === */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
@@ -32,13 +20,10 @@
       --line: rgba(73,124,159,0.18);
       --accent: #4f7da0;
       --accent-strong: #3f6989;
-      --accent-soft: rgba(73,124,159,0.14);
       --shadow: 0 18px 40px rgba(38,72,96,0.10);
-      --hero-overlay: linear-gradient(rgba(255,255,255,0.68), rgba(255,255,255,0.68));
       --hero-image: url('https://image.jimcdn.com/app/cms/image/transf/dimension=2000x1500:format=jpg/path/s8d2ea14161653659/backgroundarea/i484c85f107a71160/version/1509568087/image.jpg');
     }
 
-    body.light-mode { /* ... gleiche Variablen wie vorher ... */ }
     body.dark-mode {
       --bg: #0f1921;
       --bg-soft: rgba(21,31,40,0.88);
@@ -49,265 +34,116 @@
       --accent: #8ab4cf;
       --accent-strong: #b8d4e6;
       --shadow: 0 20px 44px rgba(0,0,0,0.28);
-      --hero-overlay: linear-gradient(rgba(10,17,23,0.58), rgba(10,17,23,0.68));
     }
 
-    /* Dein restliches CSS bleibt gleich – ich habe es hier aus Platzgründen nicht 1:1 kopiert.
-       Ersetze diesen Block mit deinem kompletten <style> aus der Originaldatei. */
+    body {
+      font-family: 'Open Sans', sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
 
-    /* Neue Ergänzungen */
-    .gallery-grid {
+    h1, h2, h3 { font-family: 'Montserrat', sans-serif; }
+
+    nav { padding: 1rem 3rem; background: rgba(255,255,255,0.9); position: fixed; width: 100%; z-index: 100; }
+    .nav-logo { font-size: 1.5rem; font-weight: 700; }
+    .nav-logo span { color: var(--accent); }
+
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), var(--hero-image) center/cover;
+      color: white;
+      display: flex;
+      align-items: center;
+      text-align: center;
+    }
+
+    .section { padding: 6rem 2rem; }
+    .container { max-width: 1100px; margin: 0 auto; }
+
+    .offer-grid, .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.2rem;
-      margin-top: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
     }
-    .gallery-item {
-      border-radius: 24px;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      aspect-ratio: 16 / 11;
+
+    .card {
       background: var(--bg-card);
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: var(--shadow);
     }
+
     .gallery-item img {
       width: 100%;
-      height: 100%;
+      height: 220px;
       object-fit: cover;
-      transition: transform 0.4s ease;
-    }
-    .gallery-item:hover img { transform: scale(1.08); }
-
-    .testimonial {
-      background: var(--bg-card);
-      border: 1px solid var(--line);
-      border-radius: 24px;
-      padding: 2rem;
-      font-style: italic;
-    }
-    .contact-form input,
-    .contact-form textarea {
-      width: 100%;
-      padding: 1rem 1.2rem;
-      margin-bottom: 1rem;
-      border: 1px solid var(--line);
       border-radius: 16px;
-      background: var(--bg-soft);
-      color: var(--text);
-      font-family: inherit;
     }
-    .contact-form button {
-      width: 100%;
+
+    .btn-primary {
+      background: var(--accent);
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      display: inline-block;
     }
+
+    footer { text-align: center; padding: 3rem; background: #111; color: #aaa; }
   </style>
 </head>
 <body class="dark-mode">
-  <nav id="navbar">
-    <a href="#top" class="nav-logo">Dominik <span>Lohmar</span></a>
-    <ul class="nav-links">
-      <li><a href="#leistungen">Leistungen</a></li>
-      <li><a href="#impressionen">Impressionen</a></li>
-      <li><a href="#referenzen">Referenzen</a></li>
-      <li><a href="#ueber-mich">Über mich</a></li>
-      <li><a href="#kontakt">Kontakt</a></li>
-    </ul>
-    <div class="nav-right">
-      <button class="theme-toggle" id="themeToggle" aria-label="Theme wechseln">☾</button>
-      <a class="nav-cta" href="#kontakt">Jetzt anfragen</a>
-      <button class="hamburger" id="hamburger" aria-label="Menü öffnen">
-        <span></span><span></span><span></span>
-      </button>
+
+  <nav>
+    <div class="container" style="display:flex; justify-content:space-between; align-items:center;">
+      <a href="#" class="nav-logo">Dominik <span>Lohmar</span></a>
+      <div>
+        <a href="#leistungen">Leistungen</a> |
+        <a href="#impressionen">Impressionen</a> |
+        <a href="#referenzen">Referenzen</a> |
+        <a href="#kontakt">Kontakt</a>
+      </div>
     </div>
   </nav>
 
-  <div class="mobile-menu" id="mobileMenu">
-    <div class="mobile-menu-inner">
-      <a href="#leistungen">Leistungen</a>
-      <a href="#impressionen">Impressionen</a>
-      <a href="#referenzen">Referenzen</a>
-      <a href="#ueber-mich">Über mich</a>
-      <a href="#kontakt">Kontakt</a>
+  <section class="hero">
+    <div class="container">
+      <h1>Dominik Lohmar</h1>
+      <p style="font-size:1.3rem; max-width:700px; margin:0 auto;">Zauberer & Mentalist für stilvolle Events</p>
+      <a href="#kontakt" class="btn-primary" style="margin-top:2rem;">Jetzt unverbindlich anfragen</a>
     </div>
-  </div>
+  </section>
 
-  <main id="top">
-    <!-- Hero bleibt fast gleich -->
-    <section class="hero">
-      <div class="hero-content">
-        <div class="hero-copy">
-          <div class="section-eyebrow">Zauberkunst mit Stil</div>
-          <h1>Dominik Lohmar</h1>
-          <p>Moderne Zauberkunst und Mentalismus für Firmenfeiern, Hochzeiten und besondere Events – elegant, nahbar und unvergesslich.</p>
-          <div class="hero-actions">
-            <a href="#kontakt" class="btn-primary">Unverbindlich anfragen</a>
-            <a href="#leistungen" class="btn-secondary">Leistungen ansehen</a>
-          </div>
-        </div>
-        <aside class="hero-card">
-          <span class="mini-label">Für besondere Anlässe</span>
-          <h3>Magisch. Edel. Persönlich.</h3>
-          <ul>
-            <li>Firmenfeiern & Galas</li>
-            <li>Hochzeiten & exklusive Events</li>
-            <li>Close-Up, Parlour & Bühne</li>
-          </ul>
-        </aside>
+  <section id="leistungen" class="section">
+    <div class="container">
+      <h2>Leistungen</h2>
+      <div class="offer-grid">
+        <div class="card"><h3>Close-Up Magic</h3><p>Direkt am Tisch</p></div>
+        <div class="card"><h3>Parlour Show</h3><p>Für mittlere Gruppen</p></div>
+        <div class="card"><h3>Bühnenshow</h3><p>Für große Events</p></div>
       </div>
-    </section>
-
-    <!-- Intro Strip bleibt gleich -->
-
-    <!-- LEISTUNGEN – erweitert -->
-    <section id="leistungen">
-      <div class="section-shell">
-        <div class="section-eyebrow">Leistungen</div>
-        <h2>Zauberkunst für Events mit Anspruch</h2>
-        <div class="offer-grid" style="margin-top: 2.5rem;">
-          <div class="offer-card">
-            <h3>Close-Up Magic</h3>
-            <p>Direkt am Tisch – höchste Interaktion und staunende Gesichter. Ideal für Empfänge, Dinner und kleinere Gesellschaften.</p>
-            <ul style="margin-top: 1rem; font-size: 0.9rem; color: var(--muted);">
-              <li>✓ 1–2 Stunden</li>
-              <li>✓ 10–80 Personen</li>
-              <li>✓ Sehr persönlich</li>
-            </ul>
-          </div>
-          <div class="offer-card">
-            <h3>Parlour Show</h3>
-            <p>Die perfekte Balance zwischen Nähe und Bühnenwirkung für mittelgroße Gruppen.</p>
-            <ul style="margin-top: 1rem; font-size: 0.9rem; color: var(--muted);">
-              <li>✓ 45–75 Minuten</li>
-              <li>✓ 30–150 Personen</li>
-              <li>✓ Mit Publikumsbeteiligung</li>
-            </ul>
-          </div>
-          <div class="offer-card">
-            <h3>Bühnenshow</h3>
-            <p>Große, elegante Show für Events mit vielen Gästen.</p>
-            <ul style="margin-top: 1rem; font-size: 0.9rem; color: var(--muted);">
-              <li>✓ 60–90 Minuten</li>
-              <li>✓ Ab 100 Personen</li>
-              <li>✓ Technik & Bühne</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Neue Galerie -->
-    <section id="impressionen">
-      <div class="section-shell">
-        <div class="section-eyebrow">Impressionen</div>
-        <h2>Momente voller Magie</h2>
-        <div class="gallery-grid">
-          <div class="gallery-item"><img src="https://picsum.photos/id/1015/800/600" alt="Close-Up Magic"></div>
-          <div class="gallery-item"><img src="https://picsum.photos/id/201/800/600" alt="Parlour Show"></div>
-          <div class="gallery-item"><img src="https://picsum.photos/id/237/800/600" alt="Hochzeit"></div>
-          <div class="gallery-item"><img src="https://picsum.photos/id/180/800/600" alt="Firmenevent"></div>
-          <div class="gallery-item"><img src="https://picsum.photos/id/251/800/600" alt="Mentalismus"></div>
-          <div class="gallery-item"><img src="https://picsum.photos/id/133/800/600" alt="Bühne"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Referenzen -->
-    <section id="referenzen">
-      <div class="section-shell">
-        <div class="section-eyebrow">Referenzen</div>
-        <h2>Was meine Kunden sagen</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2rem; margin-top: 2.5rem;">
-          <div class="testimonial">
-            <p>„Dominik hat unsere Firmenfeier unvergesslich gemacht. Die Gäste waren absolut begeistert!“</p>
-            <strong>— Dr. Markus Weber, Geschäftsführer</strong>
-          </div>
-          <div class="testimonial">
-            <p>„Die schönste Hochzeitsüberraschung ever. Vielen Dank für diesen magischen Moment!“</p>
-            <strong>— Anna & Thomas Berger</strong>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Über mich bleibt gleich -->
-
-    <!-- Kontakt mit Formular -->
-    <section id="kontakt">
-      <div class="contact-grid">
-        <div class="contact-card">
-          <div class="section-eyebrow">Kontakt</div>
-          <h2>Unverbindlich anfragen</h2>
-          <p>Ich melde mich innerhalb von 24 Stunden bei dir zurück.</p>
-          
-          <form id="contactForm" class="contact-form">
-            <input type="text" id="name" placeholder="Dein Name *" required>
-            <input type="email" id="email" placeholder="E-Mail-Adresse *" required>
-            <input type="tel" id="phone" placeholder="Telefon">
-            <textarea id="message" rows="6" placeholder="Beschreibe dein Event (Datum, Ort, Anzahl Gäste, gewünschtes Format...)" required></textarea>
-            <button type="submit" class="btn-primary">Nachricht senden</button>
-          </form>
-        </div>
-        
-        <div class="contact-panel">
-          <h3>Kontaktmöglichkeiten</h3>
-          <ul class="contact-list">
-            <li><strong>E-Mail:</strong><br />hallo@dominiklohmar.de</li>
-            <li><strong>Telefon:</strong><br />+49 221 98765430</li>
-            <li><strong>Ort:</strong><br />Köln & deutschlandweit</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="footer-inner">
-      <span>© 2026 Dominik Lohmar</span>
-      <span>Zauberer & Mentalist für stilvolle Events</span>
     </div>
-  </footer>
+  </section>
 
-  <script>
-    // Theme Toggle + Mobile Menu (wie vorher)
-    const body = document.body;
-    const themeToggle = document.getElementById('themeToggle');
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const navbar = document.getElementById('navbar');
+  <section id="impressionen" class="section">
+    <div class="container">
+      <h2>Impressionen</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item"><img src="https://picsum.photos/id/1015/600/400" alt=""></div>
+        <div class="gallery-item"><img src="https://picsum.photos/id/201/600/400" alt=""></div>
+        <div class="gallery-item"><img src="https://picsum.photos/id/237/600/400" alt=""></div>
+      </div>
+    </div>
+  </section>
 
-    // Theme
-    if (localStorage.getItem('theme') === 'light-mode') {
-      body.classList.add('light-mode');
-      body.classList.remove('dark-mode');
-      themeToggle.textContent = '☀';
-    }
+  <section id="kontakt" class="section">
+    <div class="container">
+      <h2>Kontakt</h2>
+      <p>hallo@dominiklohmar.de</p>
+    </div>
+  </section>
 
-    themeToggle.addEventListener('click', () => {
-      const isDark = body.classList.contains('dark-mode');
-      body.classList.toggle('dark-mode', !isDark);
-      body.classList.toggle('light-mode', isDark);
-      localStorage.setItem('theme', isDark ? 'light-mode' : 'dark-mode');
-      themeToggle.textContent = isDark ? '☀' : '☾';
-    });
-
-    // Mobile Menu
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('open');
-      mobileMenu.classList.toggle('open');
-    });
-
-    // Navbar Scroll
-    window.addEventListener('scroll', () => {
-      navbar.classList.toggle('scrolled', window.scrollY > 18);
-    });
-
-    // Kontaktformular
-    const form = document.getElementById('contactForm');
-    if (form) {
-      form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        alert('✅ Vielen Dank! Deine Anfrage wurde erfolgreich gesendet.\n\n(In der finalen Version wird diese hier per E-Mail ankommen.)');
-        form.reset();
-      });
-    }
-  </script>
 </body>
 </html>
