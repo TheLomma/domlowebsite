@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Max Musterzauberer – Magician & Mentalist</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --gold: #c9a84c;
+      --gold-light: #e8c97a;
+      --dark: #0a0a0f;
+      --dark2: #111118;
+      --dark3: #1a1a25;
+      --text: #e8e8f0;
+      --text-muted: #888899;
+      --white: #ffffff;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--dark);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    /* ── SCROLLBAR ── */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--dark); }
+    ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 1.2rem 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: linear-gradient(to bottom, rgba(10,10,15,0.95), transparent);
+      backdrop-filter: blur(6px);
+      transition: background 0.3s;
+    }
+    nav.scrolled {
+      background: rgba(10,10,15,0.97);
+      border-bottom: 1px solid rgba(201,168,76,0.15);
+    }
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: var(--gold);
+      letter-spacing: 0.05em;
+      text-decoration: none;
+    }
+    .nav-logo span { color: var(--text); font-style: italic; }
+    .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.85rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      transition: color 0.3s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-cta {
+      background: transparent;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      padding: 0.55rem 1.4rem;
+      border-radius: 2px;
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    .nav-cta:hover { background: var(--gold); color: var(--dark); }
+
+    /* ── HERO ── */
+    #hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      background: radial-gradient(ellipse at 50% 60%, #1a1428 0%, var(--dark) 70%);
+    }
+    .hero-particles {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    .particle {
+      position: absolute;
+      border-radius: 50%;
+      background: var(--gold);
+      opacity: 0;
+      animation: float-particle linear infinite;
+    }
+    @keyframes float-particle {
+      0% { transform: translateY(100vh) scale(0); opacity: 0; }
+      10% { opacity: 0.6; }
+      90% { opacity: 0.2; }
+      100% { transform: translateY(-10vh) scale(1); opacity: 0; }
+    }
+    .hero-lines {
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 20% 50%, rgba(201,168,76,0.04) 0%, transparent 50%),
+        radial-gradient(circle at 80% 30%, rgba(201,168,76,0.04) 0%, transparent 50%);
+    }
+    .hero-content { position: relative; z-index: 2; max-width: 800px; padding: 2rem; }
+    .hero-eyebrow {
+      display: inline-block;
+      font-size: 0.75rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+      padding: 0.4rem 1.2rem;
+      border: 1px solid rgba(201,168,76,0.3);
+      border-radius: 2px;
+    }
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3rem, 8vw, 6.5rem);
+      line-height: 1.05;
+      color: var(--white);
+      margin-bottom: 0.3rem;
+    }
+    .hero-title .gold { color: var(--gold); }
+    .hero-title .italic { font-style: italic; }
+    .hero-sub {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1rem, 2.5vw, 1.5rem);
+      font-style: italic;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      letter-spacing: 0.05em;
+    }
+    .hero-desc {
+      font-size: 1rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+      max-width: 520px;
+      margin: 0 auto 3rem;
+    }
+    .hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-primary {
+      background: var(--gold);
+      color: var(--dark);
+      padding: 0.9rem 2.2rem;
+      border: none;
+      font-size: 0.85rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      font-weight: 600;
+      cursor: pointer;
+      border-radius: 2px;
+      text-decoration: none;
+      transition: all 0.3s;
+      display: inline-block;
+    }
+    .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(201,168,76,0.3); }
+    .btn-secondary {
+      background: transparent;
+      color: var(--text);
+      padding: 0.9rem 2.2rem;
+      border: 1px solid rgba(255,255,255,0.2);
+      font-size: 0.85rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      cursor: pointer;
+      border-radius: 2px;
+      text-decoration: none;
+      transition: all 0.3s;
+      display: inline-block;
+    }
+    .btn-secondary:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+    .hero-scroll {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--text-muted);
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      animation: bounce 2s infinite;
+    }
+    .scroll-line {
+      width: 1px;
+      height: 40px;
+      background: linear-gradient(to bottom, var(--gold), transparent);
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(8px); }
+    }
+
+    /* ── DIVIDER ── */
+    .gold-divider {
+      width: 60px;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--gold), transparent);
+      margin: 0 auto 1.5rem;
+    }
+
+    /* ── SECTION BASE ── */
+    section { padding: 7rem 4rem; }
+    .section-eyebrow {
+      font-size: 0.72rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-align: center;
+      margin-bottom: 0.8rem;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      text-align: center;
+      color: var(--white);
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+    .section-sub {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 1rem;
+      line-height: 1.8;
+      max-width: 560px;
+      margin: 0 auto 4rem;
+    }
+
+    /* ── ABOUT ── */
+    #about {
+      background: var(--dark2);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      border-radius: 4px;
+    }
+    .about-visual {
+      position: relative;
+      height: 520px;
+    }
+    .about-img-frame {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, var(--dark3) 0%, #1e1430 100%);
+      border-radius: 4px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .about-silhouette {
+      font-size: 12rem;
+      opacity: 0.07;
+      filter: blur(2px);
+    }
+    .about-badge {
+      position: absolute;
+      bottom: 2rem;
+      right: -2rem;
+      background: var(--gold);
+      color: var(--dark);
+      padding: 1.5rem;
+      border-radius: 4px;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    }
+    .about-badge .num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      line-height: 1;
+      display: block;
+    }
+    .about-badge .label {
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .about-frame-border {
+      position: absolute;
+      top: 1.5rem;
+      left: -1.5rem;
+      right: 1.5rem;
+      bottom: -1.5rem;
+      border: 1px solid rgba(201,168,76,0.25);
+      border-radius: 4px;
+      z-index: -1;
+    }
+    .about-text .eyebrow {
+      font-size: 0.72rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+    .about-text h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      color: var(--white);
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+    .about-text h2 em { color: var(--gold); font-style: italic; }
+    .about-text p {
+      color: var(--text-muted);
+      line-height: 1.9;
+      margin-bottom: 1.2rem;
+      font-size: 0.97rem;
+    }
+    .about-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    .stat-item .num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: var(--gold);
+      display: block;
+    }
+    .stat-item .label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    /* ── ANGEBOTE ── */
+    #angebote { background: var(--dark); }
+    .angebote-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .angebot-card {
+      background: var(--dark2);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 4px;
+      padding: 2.5rem 2rem;
+      transition: all 0.4s;
+      position: relative;
+      overflow: hidden;
+      cursor: default;
+    }
+    .angebot-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(to right, transparent, var(--gold), transparent);
+      opacity: 0;
+      transition: opacity 0.4s;
+    }
+    .angebot-card:hover { border-color: rgba(201,168,76,0.3); transform: translateY(-8px); box-shadow: 0 30px 80px rgba(0,0,0,0.4); }
+    .angebot-card:hover::before { opacity: 1; }
+    .angebot-card.featured {
+      background: linear-gradient(135deg, #1e1830 0%, #1a1528 100%);
+      border-color: rgba(201,168,76,0.3);
+    }
+    .angebot-card.featured::before { opacity: 1; }
+    .card-icon {
+      font-size: 2.2rem;
+      margin-bottom: 1.5rem;
+      display: block;
+    }
+    .card-tag {
+      display: inline-block;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      background: rgba(201,168,76,0.1);
+      border: 1px solid rgba(201,168,76,0.2);
+      padding: 0.25rem 0.7rem;
+      border-radius: 2px;
+      margin-bottom: 1rem;
+    }
+    .card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: var(--white);
+      margin-bottom: 1rem;
+    }
+    .card-desc {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+    .card-list { list-style: none; }
+    .card-list li {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      padding: 0.4rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .card-list li::before {
+      content: '';
+      width: 16px;
+      height: 1px;
+      background: var(--gold);
+      flex-shrink: 0;
+    }
+
+    /* ── ABLAUF ── */
+    #ablauf {
+      background: var(--dark2);
+    }
+    .ablauf-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .ablauf-steps::before {
+      content: '';
+      position: absolute;
+      top: 2.5rem;
+      left: 10%;
+      right: 10%;
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(201,168,76,0.3), transparent);
+    }
+    .step {
+      text-align: center;
+      position: relative;
+    }
+    .step-num {
+      width: 5rem;
+      height: 5rem;
+      border-radius: 50%;
+      background: var(--dark3);
+      border: 1px solid rgba(201,168,76,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: var(--gold);
+      position: relative;
+      z-index: 1;
+    }
+    .step h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      color: var(--white);
+      margin-bottom: 0.7rem;
+    }
+    .step p {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      line-height: 1.7;
+    }
+
+    /* ── TESTIMONIALS ── */
+    #referenzen { background: var(--dark); }
+    .testi-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .testi-card {
+      background: var(--dark2);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 4px;
+      padding: 2rem;
+      position: relative;
+      transition: all 0.3s;
+    }
+    .testi-card:hover { border-color: rgba(201,168,76,0.2); transform: translateY(-4px); }
+    .testi-quote {
+      font-size: 3rem;
+      color: var(--gold);
+      line-height: 1;
+      opacity: 0.4;
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 1rem;
+    }
+    .testi-text {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      line-height: 1.8;
+      font-style: italic;
+      margin-bottom: 1.5rem;
+    }
+    .testi-author {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+    }
+    .testi-avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--dark3), #2a2040);
+      border: 1px solid rgba(201,168,76,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+    }
+    .testi-name {
+      font-size: 0.85rem;
+      color: var(--white);
+      font-weight: 500;
+    }
+    .testi-role {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+    }
+    .stars {
+      color: var(--gold);
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.8rem;
+    }
+
+    /* ── LOGOS ── */
+    #kunden {
+      background: var(--dark2);
+      padding: 4rem;
+      text-align: center;
+    }
+    .kunden-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 2.5rem;
+    }
+    .logos-row {
+      display: flex;
+      gap: 3rem;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .logo-item {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      color: rgba(255,255,255,0.15);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 700;
+      transition: color 0.3s;
+      cursor: default;
+    }
+    .logo-item:hover { color: rgba(201,168,76,0.5); }
+
+    /* ── KONTAKT ── */
+    #kontakt {
+      background: radial-gradient(ellipse at 50% 0%, #1a1428 0%, var(--dark) 70%);
+      text-align: center;
+    }
+    .kontakt-inner { max-width: 680px; margin: 0 auto; }
+    .kontakt-form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+      margin-top: 3rem;
+      text-align: left;
+    }
+    .form-group { display: flex; flex-direction: column; gap: 0.5rem; }
+    .form-group.full { grid-column: 1 / -1; }
+    .form-group label {
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      background: var(--dark2);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 2px;
+      padding: 0.85rem 1rem;
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus { border-color: var(--gold); }
+    .form-group textarea { height: 130px; resize: vertical; }
+    .form-group select { appearance: none; cursor: pointer; }
+    .form-group select option { background: var(--dark2); }
+    .form-submit {
+      grid-column: 1 / -1;
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+    .form-note {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      text-align: center;
+      margin-top: 1rem;
+      grid-column: 1 / -1;
+    }
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      margin-top: 4rem;
+      padding-top: 3rem;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      flex-wrap: wrap;
+    }
+    .contact-item {
+      text-align: center;
+    }
+    .contact-item .icon { font-size: 1.5rem; margin-bottom: 0.5rem; }
+    .contact-item .ci-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+    .contact-item .ci-value {
+      font-size: 0.95rem;
+      color: var(--white);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #060608;
+      padding: 2.5rem 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid rgba(255,255,255,0.04);
+    }
+    .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      color: var(--gold);
+    }
+    .footer-copy {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+    .footer-links { display: flex; gap: 1.5rem; }
+    .footer-links a {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .footer-links a:hover { color: var(--gold); }
+
+    /* ── ANIMATIONS ── */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── CURSOR GLOW ── */
+    .cursor-glow {
+      position: fixed;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(201,168,76,0.06) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+      transform: translate(-50%, -50%);
+      transition: top 0.1s, left 0.1s;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      nav { padding: 1rem 1.5rem; }
+      .nav-links { display: none; }
+      section { padding: 5rem 1.5rem; }
+      #about { grid-template-columns: 1fr; gap: 3rem; padding: 4rem 1.5rem; }
+      .about-visual { height: 280px; }
+      .about-badge { right: 0; }
+      .angebote-grid { grid-template-columns: 1fr; }
+      .ablauf-steps { grid-template-columns: 1fr 1fr; }
+      .ablauf-steps::before { display: none; }
+      .testi-grid { grid-template-columns: 1fr; }
+      .kontakt-form { grid-template-columns: 1fr; }
+      .form-group.full { grid-column: 1; }
+      .form-submit { grid-column: 1; }
+      .form-note { grid-column: 1; }
+      footer { flex-direction: column; gap: 1rem; text-align: center; }
+      #kunden { padding: 3rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- CURSOR GLOW -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="#hero" class="nav-logo">Max <span>Musterzauberer</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">Über mich</a></li>
+      <li><a href="#angebote">Angebote</a></li>
+      <li><a href="#referenzen">Referenzen</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+    <a href="#kontakt" class="nav-cta">Anfragen</a>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-particles" id="particles"></div>
+    <div class="hero-lines"></div>
+    <div class="hero-content">
+      <span class="hero-eyebrow">✦ Magie & Mentalismus ✦</span>
+      <h1 class="hero-title">
+        <span class="italic gold">Max</span><br>Musterzauberer
+      </h1>
+      <p class="hero-sub">Magician & Mentalist</p>
+      <p class="hero-desc">
+        Wo Logik endet, beginnt das Staunen. Max Musterzauberer verbindet moderne Zauberkunst
+        mit psychologischer Tiefe – für Momente, die Ihre Gäste noch lange beschäftigen werden.
+      </p>
+      <div class="hero-btns">
+        <a href="#kontakt" class="btn-primary">Jetzt anfragen</a>
+        <a href="#angebote" class="btn-secondary">Leistungen entdecken</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-line"></div>
+      Scroll
+    </div>
+  </section>
+
+  <!-- KUNDEN-LOGOS -->
+  <div id="kunden">
+    <p class="kunden-label">Vertrauen von führenden Unternehmen & Veranstaltern</p>
+    <div class="logos-row">
+      <span class="logo-item">Daimler AG</span>
+      <span class="logo-item">Marriott Hotels</span>
+      <span class="logo-item">Allianz Group</span>
+      <span class="logo-item">Deutsche Bank</span>
+      <span class="logo-item">Porsche Events</span>
+      <span class="logo-item">Grand Hyatt</span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about-visual fade-in">
+      <div class="about-img-frame">
+        <span class="about-silhouette">🎩</span>
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:1rem;">
+          <div style="width:120px;height:120px;border-radius:50%;background:linear-gradient(135deg,#2a1f40,#1a1428);border:2px solid rgba(201,168,76,0.4);display:flex;align-items:center;justify-content:center;font-size:3.5rem;">🎩</div>
+          <div style="text-align:center;">
+            <div style="font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--white);">Max Musterzauberer</div>
+            <div style="font-size:0.75rem;color:var(--gold);letter-spacing:0.15em;text-transform:uppercase;">Magician & Mentalist</div>
+          </div>
+          <div style="display:flex;gap:1rem;margin-top:1rem;">
+            <div style="text-align:center;padding:0.8rem 1.2rem;background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.2);border-radius:3px;">
+              <div style="font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--gold);">★★★★★</div>
+              <div style="font-size:0.65rem;color:var(--text-muted);letter-spacing:0.1em;text-transform:uppercase;">Google Reviews</div>
+            </div>
+            <div style="text-align:center;padding:0.8rem 1.2rem;background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.2);border-radius:3px;">
+              <div style="font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--gold);">DEA</div>
+              <div style="font-size:0.65rem;color:var(--text-muted);letter-spacing:0.1em;text-transform:uppercase;">Mitglied</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-badge">
+        <span class="num">15+</span>
+        <span class="label">Jahre<br>Erfahrung</span>
+      </div>
+      <div class="about-frame-border"></div>
+    </div>
+    <div class="about-text fade-in">
+      <p class="eyebrow">✦ Über Max Musterzauberer</p>
+      <h2>Magie, die <em>berührt</em> —<br>nicht nur überrascht</h2>
+      <p>
+        Max Musterzauberer ist kein gewöhnlicher Zauberer. Nach über 15 Jahren auf den Bühnen Europas,
+        in Luxushotels, auf Firmenevents und bei exklusiven Privatfeiern hat er eine ganz eigene
+        Handschrift entwickelt: präzise, elegant, psychologisch.
+      </p>
+      <p>
+        Als ausgebildeter Psychologe und Mitglied der Deutschen Entfesselungskünstler- und
+        Zauberkünstler-Vereinigung (DEA) verbindet er klassische Zauberkunst mit modernem
+        Mentalismus — und schafft damit Erlebnisse, die noch Tage danach nachwirken.
+      </p>
+      <p>
+        Ob der Moment, wenn eine Karte mitten in einer versiegelten Flasche erscheint,
+        oder wenn er den Geburtstag eines fremden Gastes errät — Max Musterzauberer macht das Unmögliche
+        spürbar nah.
+      </p>
+      <div class="about-stats">
+        <div class="stat-item">
+          <span class="num">400+</span>
+          <span class="label">Events pro Jahr</span>
+        </div>
+        <div class="stat-item">
+          <span class="num">98%</span>
+          <span class="label">Weitempfehlungen</span>
+        </div>
+        <div class="stat-item">
+          <span class="num">12</span>
+          <span class="label">Länder bereist</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ANGEBOTE -->
+  <section id="angebote">
+    <p class="section-eyebrow">✦ Leistungen</p>
+    <h2 class="section-title">Das richtige Format<br>für jeden Anlass</h2>
+    <p class="section-sub">
+      Von der intimen Tischrunde bis zur großen Bühne — Max Musterzauberer passt sich
+      perfekt Ihrer Veranstaltung an.
+    </p>
+    <div class="angebote-grid">
+      <!-- Close-Up -->
+      <div class="angebot-card fade-in">
+        <span class="card-icon">🃏</span>
+        <span class="card-tag">Besonders beliebt</span>
+        <h3 class="card-title">Close-Up Magic</h3>
+        <p class="card-desc">
+          Das Herzstück der modernen Zauberkunst: Magie hautnah, in Ihren Händen,
+          an Ihrem Tisch. Gäste werden zu Teilnehmern — nicht zu Zuschauern.
+        </p>
+        <ul class="card-list">
+          <li>Empfangsbegleitung & Tischrunden</li>
+          <li>Karten-, Münz- & Alltagsobjekte</li>
+          <li>Ideal für 2–8 Personen gleichzeitig</li>
+          <li>Personalisierbar (Namen, Firmenlogo)</li>
+          <li>Gehobene Atmosphäre ohne Bühne</li>
+        </ul>
+      </div>
+      <!-- Parlour / Featured -->
+      <div class="angebot-card featured fade-in">
+        <span class="card-icon">🎭</span>
+        <span class="card-tag">Highlight</span>
+        <h3 class="card-title">Parlour Show</h3>
+        <p class="card-desc">
+          Die goldene Mitte: eine kompakte Show für 20–80 Personen, interaktiv
+          und mitreißend. Perfekt für Firmenfeiern, Jubiläen und Hochzeiten.
+        </p>
+        <ul class="card-list">
+          <li>30–60 Minuten Showprogramm</li>
+          <li>Starke Mentalismusnummern</li>
+          <li>Interaktion mit dem Publikum</li>
+          <li>Ohne großes technisches Equipment</li>
+          <li>Kein Podium nötig – flexibel adaptierbar</li>
+        </ul>
+      </div>
+      <!-- Bühne -->
+      <div class="angebot-card fade-in">
+        <span class="card-icon">✨</span>
+        <span class="card-tag">Grand Scale</span>
+        <h3 class="card-title">Bühnenshow</h3>
+        <p class="card-desc">
+          Großes Kino: eine vollständige Bühnenproduktion mit Licht, Sound und
+          Effekten. Max Musterzauberer als Headliner Ihres Abends — unvergesslich.
+        </p>
+        <ul class="card-list">
+          <li>60–90 Minuten Vollprogramm</li>
+          <li>Illusionen & Großillusionen</li>
+          <li>Professionelles Technik-Rider</li>
+          <li>Für 80–1.000+ Gäste</li>
+          <li>Eigene Ton- & Lichttechnik optional</li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="max-width:1100px;margin:2rem auto 0;display:grid;grid-template-columns:1fr 1fr;gap:2rem;">
+      <div class="angebot-card fade-in" style="display:flex;align-items:flex-start;gap:1.5rem;">
+        <span style="font-size:2rem;flex-shrink:0;">💍</span>
+        <div>
+          <span class="card-tag">Hochzeiten</span>
+          <h3 class="card-title" style="font-size:1.2rem;">Hochzeitsmagie</h3>
+          <p class="card-desc" style="margin-bottom:0;">Vom Sektempfang bis zur After-Party — Close-Up-Magie und emotionale Mentalismusnummern speziell für das schönste Fest Ihres Lebens.</p>
+        </div>
+      </div>
+      <div class="angebot-card fade-in" style="display:flex;align-items:flex-start;gap:1.5rem;">
+        <span style="font-size:2rem;flex-shrink:0;">🏢</span>
+        <div>
+          <span class="card-tag">Firmen</span>
+          <h3 class="card-title" style="font-size:1.2rem;">Corporate Magic</h3>
+          <p class="card-desc" style="margin-bottom:0;">Magie als Kommunikationsmittel: Produktlaunches, Teamevents, Jubiläen. Inhalte lassen sich mit Unternehmensbotschaften verknüpfen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABLAUF -->
+  <section id="ablauf">
+    <p class="section-eyebrow">✦ So läuft es ab</p>
+    <h2 class="section-title">Vier Schritte bis zum<br>perfekten Abend</h2>
+    <p class="section-sub">Unkompliziert, persönlich, professionell — von der ersten Anfrage bis zum letzten Applaus.</p>
+    <div class="ablauf-steps">
+      <div class="step fade-in">
+        <div class="step-num">01</div>
+        <h3>Anfrage & Gespräch</h3>
+        <p>Sie schildern Ihren Anlass, Ihre Gäste und Ihre Wünsche. Max Musterzauberer hört zu und berät ehrlich.</p>
+      </div>
+      <div class="step fade-in">
+        <div class="step-num">02</div>
+        <h3>Maßgeschneidertes Konzept</h3>
+        <p>Gemeinsam entsteht ein individuelles Programm — abgestimmt auf Ihre Location, Stimmung und Gästezahl.</p>
+      </div>
+      <div class="step fade-in">
+        <div class="step-num">03</div>
+        <h3>Buchung & Briefing</h3>
+        <p>Klare Konditionen, transparente Preise. Kurzes Briefing vor Ort oder per Video-Call — fertig.</p>
+      </div>
+      <div class="step fade-in">
+        <div class="step-num">04</div>
+        <h3>Ihr unvergesslicher Abend</h3>
+        <p>Max Musterzauberer kommt pünktlich, professionell und bereitet — und sorgt für Momente, die Ihre Gäste nie vergessen.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- REFERENZEN -->
+  <section id="referenzen">
+    <p class="section-eyebrow">✦ Das sagen Kunden</p>
+    <h2 class="section-title">Stimmen, die<br>für sich sprechen</h2>
+    <p class="section-sub">Über 400 Events im Jahr — und fast ebenso viele Dankesworte, die uns antreiben.</p>
+    <div class="testi-grid">
+      <div class="testi-card fade-in">
+        <div class="stars">★★★★★</div>
+        <div class="testi-quote">"</div>
+        <p class="testi-text">
+          Marco hat unsere Weihnachtsfeier in etwas Außergewöhnliches verwandelt. Die Gäste standen noch Stunden später zusammen und diskutierten, wie er das gemacht hat. Absolute Buchungsempfehlung.
+        </p>
+        <div class="testi-author">
+          <div class="testi-avatar">👩‍💼</div>
+          <div>
+            <div class="testi-name">Sabine Kröger</div>
+            <div class="testi-role">HR-Managerin, Allianz Group</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card fade-in">
+        <div class="stars">★★★★★</div>
+        <div class="testi-quote">"</div>
+        <p class="testi-text">
+          Wir haben Marco für unsere Hochzeit gebucht — Close-Up beim Empfang. Unsere Gäste waren vollkommen begeistert, sogar meine skeptische Schwiegermutter. Einfach perfekt.
+        </p>
+        <div class="testi-author">
+          <div class="testi-avatar">👰</div>
+          <div>
+            <div class="testi-name">Julia & Tobias Wermke</div>
+            <div class="testi-role">Hochzeit, Heidelberg 2024</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card fade-in">
+        <div class="stars">★★★★★</div>
+        <div class="testi-quote">"</div>
+        <p class="testi-text">
+          Als Eventmanager habe ich viele Acts gebucht — Max Musterzauberer ist einer der wenigen, bei dem ich wirklich nicht weiß wie er es macht. Und das nach 20 Jahren in der Branche.
+        </p>
+        <div class="testi-author">
+          <div class="testi-avatar">👨‍💼</div>
+          <div>
+            <div class="testi-name">Rainer Falk</div>
+            <div class="testi-role">Eventmanager, Marriott Frankfurt</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONTAKT -->
+  <section id="kontakt">
+    <div class="kontakt-inner">
+      <p class="section-eyebrow">✦ Kontakt</p>
+      <h2 class="section-title">Bereit für<br>das Unmögliche?</h2>
+      <p class="section-sub">
+        Erzählen Sie mir von Ihrem Event. Ich melde mich innerhalb von 24 Stunden
+        mit einem persönlichen Angebot zurück.
+      </p>
+      <div class="gold-divider"></div>
+      <form class="kontakt-form" onsubmit="handleSubmit(event)">
+        <div class="form-group">
+          <label>Vorname</label>
+          <input type="text" placeholder="Max" />
+        </div>
+        <div class="form-group">
+          <label>Nachname</label>
+          <input type="text" placeholder="Mustermann" />
+        </div>
+        <div class="form-group">
+          <label>E-Mail</label>
+          <input type="email" placeholder="max@beispiel.de" />
+        </div>
+        <div class="form-group">
+          <label>Telefon</label>
+          <input type="tel" placeholder="+49 170 1234567" />
+        </div>
+        <div class="form-group">
+          <label>Art des Events</label>
+          <select>
+            <option value="">Bitte wählen …</option>
+            <option>Firmenfeier / Corporate Event</option>
+            <option>Hochzeit</option>
+            <option>Geburtstagsfeier</option>
+            <option>Produktlaunch</option>
+            <option>Sonstiges</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Gewünschtes Format</label>
+          <select>
+            <option value="">Bitte wählen …</option>
+            <option>Close-Up Magic</option>
+            <option>Parlour Show</option>
+            <option>Bühnenshow</option>
+            <option>Kombination</option>
+            <option>Noch offen / Beratung gewünscht</option>
+          </select>
+        </div>
+        <div class="form-group full">
+          <label>Ihre Nachricht</label>
+          <textarea placeholder="Datum des Events, Ort, Gästezahl, besondere Wünsche …"></textarea>
+        </div>
+        <div class="form-submit">
+          <button type="submit" class="btn-primary">Anfrage absenden ✦</button>
+        </div>
+        <p class="form-note">Ich antworte persönlich — kein automatisierter Massenversand.</p>
+      </form>
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="icon">📞</div>
+          <span class="ci-label">Telefon</span>
+          <span class="ci-value">+49 221 987 654 30</span>
+        </div>
+        <div class="contact-item">
+          <div class="icon">✉️</div>
+          <span class="ci-label">E-Mail</span>
+          <span class="ci-value">hallo@maxmusterzauberer.de</span>
+        </div>
+        <div class="contact-item">
+          <div class="icon">📍</div>
+          <span class="ci-label">Standort</span>
+          <span class="ci-value">Köln / bundesweit</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">Max Musterzauberer</div>
+    <p class="footer-copy">© 2026 Max Musterzauberer – Magician & Mentalist. Alle Rechte vorbehalten.</p>
+    <div class="footer-links">
+      <a href="#">Impressum</a>
+      <a href="#">Datenschutz</a>
+      <a href="#">Instagram</a>
+    </div>
+  </footer>
+
+  <!-- SUCCESS MODAL -->
+  <div id="modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.8);z-index:999;align-items:center;justify-content:center;">
+    <div style="background:var(--dark2);border:1px solid rgba(201,168,76,0.3);border-radius:4px;padding:3rem;text-align:center;max-width:420px;margin:1rem;">
+      <div style="font-size:3rem;margin-bottom:1rem;">✨</div>
+      <h3 style="font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--white);margin-bottom:1rem;">Vielen Dank!</h3>
+      <p style="color:var(--text-muted);line-height:1.8;margin-bottom:2rem;">Ihre Anfrage ist eingegangen. Max Musterzauberer meldet sich persönlich innerhalb von 24 Stunden bei Ihnen.</p>
+      <button onclick="document.getElementById('modal').style.display='none'" class="btn-primary">Schließen</button>
+    </div>
+  </div>
+
+  <script>
+    // Cursor Glow
+    const glow = document.getElementById('cursorGlow');
+    document.addEventListener('mousemove', e => {
+      glow.style.left = e.clientX + 'px';
+      glow.style.top = e.clientY + 'px';
+    });
+
+    // Navbar scroll
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Particles
+    const container = document.getElementById('particles');
+    for (let i = 0; i < 30; i++) {
+      const p = document.createElement('div');
+      p.className = 'particle';
+      const size = Math.random() * 3 + 1;
+      p.style.cssText = `
+        width:${size}px;height:${size}px;
+        left:${Math.random()*100}%;
+        animation-duration:${Math.random()*15+10}s;
+        animation-delay:${Math.random()*15}s;
+      `;
+      container.appendChild(p);
+    }
+
+    // Fade-in on scroll
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          // stagger siblings
+          const siblings = e.target.parentElement.querySelectorAll('.fade-in');
+          siblings.forEach((s, i) => {
+            setTimeout(() => s.classList.add('visible'), i * 100);
+          });
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Form submit
+    function handleSubmit(e) {
+      e.preventDefault();
+      document.getElementById('modal').style.display = 'flex';
+    }
+  </script>
+</body>
+</html>
