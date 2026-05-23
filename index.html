@@ -5,14 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Max Musterzauberer – Zauberer & Mentalist für Firmenfeiern, Hochzeiten & Events</title>
 
-  <!-- SEO META TAGS -->
   <meta name="description" content="Max Musterzauberer – professioneller Zauberer & Mentalist aus Köln. Close-Up Magic, Parlour Shows & Bühnenshows für Firmenfeiern, Hochzeiten und Geburtstage. Jetzt anfragen!" />
   <meta name="keywords" content="Zauberer, Mentalist, Close-Up Magic, Hochzeit, Firmenfeier, Geburtstag, Bühnenshow, Köln, buchen" />
   <meta name="author" content="Max Musterzauberer" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.maxmusterzauberer.de/" />
 
-  <!-- OPEN GRAPH (WhatsApp, Facebook, LinkedIn Vorschau) -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.maxmusterzauberer.de/" />
   <meta property="og:title" content="Max Musterzauberer – Zauberer & Mentalist" />
@@ -21,13 +19,11 @@
   <meta property="og:locale" content="de_DE" />
   <meta property="og:site_name" content="Max Musterzauberer" />
 
-  <!-- TWITTER CARD -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Max Musterzauberer – Zauberer & Mentalist" />
   <meta name="twitter:description" content="Professionelle Zauberkunst & Mentalismus für Firmenfeiern, Hochzeiten und Events." />
   <meta name="twitter:image" content="https://www.maxmusterzauberer.de/og-image.jpg" />
 
-  <!-- SCHEMA.ORG (Google strukturierte Daten) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -72,12 +68,10 @@
       overflow-x: hidden;
     }
 
-    /* ── SCROLLBAR ── */
     ::-webkit-scrollbar { width: 6px; }
     ::-webkit-scrollbar-track { background: var(--dark); }
     ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
 
-    /* ── NAV ── */
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -129,7 +123,6 @@
     }
     .nav-cta:hover { background: var(--gold); color: var(--dark); }
 
-    /* ── HAMBURGER ── */
     .hamburger {
       display: none;
       flex-direction: column;
@@ -153,7 +146,6 @@
     .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
     .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-    /* ── MOBILE MENU OVERLAY ── */
     .mobile-menu {
       display: none;
       position: fixed;
@@ -193,7 +185,6 @@
       border-radius: 2px;
     }
 
-    /* ── HERO ── */
     #hero {
       position: relative;
       min-height: 100vh;
@@ -323,7 +314,6 @@
       50% { transform: translateX(-50%) translateY(8px); }
     }
 
-    /* ── DIVIDER ── */
     .gold-divider {
       width: 60px;
       height: 1px;
@@ -331,7 +321,6 @@
       margin: 0 auto 1.5rem;
     }
 
-    /* ── SECTION BASE ── */
     section { padding: 7rem 4rem; }
     .section-eyebrow {
       font-size: 0.72rem;
@@ -358,7 +347,6 @@
       margin: 0 auto 4rem;
     }
 
-    /* ── ABOUT ── */
     #about {
       background: var(--dark2);
       display: grid;
@@ -459,7 +447,6 @@
       text-transform: uppercase;
     }
 
-    /* ── ANGEBOTE ── */
     #angebote { background: var(--dark); }
     .angebote-grid {
       display: grid;
@@ -536,93 +523,6 @@
       flex-shrink: 0;
     }
 
-    /* ── ABLAUF ── */
-    #ablauf { background: var(--dark2); }
-    .ablauf-steps {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 2rem;
-      max-width: 1100px;
-      margin: 0 auto;
-      position: relative;
-    }
-    .ablauf-steps::before {
-      content: '';
-      position: absolute;
-      top: 2.5rem;
-      left: 10%;
-      right: 10%;
-      height: 1px;
-      background: linear-gradient(to right, transparent, rgba(201,168,76,0.3), transparent);
-    }
-    .step { text-align: center; position: relative; }
-    .step-num {
-      width: 5rem;
-      height: 5rem;
-      border-radius: 50%;
-      background: var(--dark3);
-      border: 1px solid rgba(201,168,76,0.3);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 1.5rem;
-      font-family: 'Playfair Display', serif;
-      font-size: 1.5rem;
-      color: var(--gold);
-      position: relative;
-      z-index: 1;
-    }
-    .step h3 { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--white); margin-bottom: 0.7rem; }
-    .step p { color: var(--text-muted); font-size: 0.85rem; line-height: 1.7; }
-
-    /* ── TESTIMONIALS ── */
-    #referenzen { background: var(--dark); }
-    .testi-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-    .testi-card {
-      background: var(--dark2);
-      border: 1px solid rgba(255,255,255,0.06);
-      border-radius: 4px;
-      padding: 2rem;
-      position: relative;
-      transition: all 0.3s;
-    }
-    .testi-card:hover { border-color: rgba(201,168,76,0.2); transform: translateY(-4px); }
-    .testi-quote { font-size: 3rem; color: var(--gold); line-height: 1; opacity: 0.4; font-family: 'Playfair Display', serif; margin-bottom: 1rem; }
-    .testi-text { color: var(--text-muted); font-size: 0.92rem; line-height: 1.8; font-style: italic; margin-bottom: 1.5rem; }
-    .testi-author { display: flex; align-items: center; gap: 0.9rem; }
-    .testi-avatar {
-      width: 42px; height: 42px; border-radius: 50%;
-      background: linear-gradient(135deg, var(--dark3), #2a2040);
-      border: 1px solid rgba(201,168,76,0.3);
-      display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;
-    }
-    .testi-name { font-size: 0.85rem; color: var(--white); font-weight: 500; }
-    .testi-role { font-size: 0.75rem; color: var(--text-muted); letter-spacing: 0.05em; }
-    .stars { color: var(--gold); font-size: 0.75rem; letter-spacing: 0.1em; margin-bottom: 0.8rem; }
-
-    /* ── LOGOS ── */
-    #kunden { background: var(--dark2); padding: 4rem; text-align: center; }
-    .kunden-label { font-size: 0.72rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 2.5rem; }
-    .logos-row { display: flex; gap: 2.5rem; justify-content: center; align-items: center; flex-wrap: wrap; }
-    .logo-item {
-      font-family: 'Playfair Display', serif;
-      font-size: 1rem;
-      color: rgba(255,255,255,0.15);
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      font-weight: 700;
-      transition: color 0.3s;
-      cursor: default;
-    }
-    .logo-item:hover { color: rgba(201,168,76,0.5); }
-
-    /* ── FAQ ── */
     #faq { background: var(--dark); }
     .faq-list {
       max-width: 760px;
@@ -681,7 +581,6 @@
     .faq-item.open .faq-answer { max-height: 300px; padding: 0 1.8rem 1.4rem; }
     .faq-answer p { color: var(--text-muted); font-size: 0.92rem; line-height: 1.8; }
 
-    /* ── KONTAKT ── */
     #kontakt { background: radial-gradient(ellipse at 50% 0%, #1a1428 0%, var(--dark) 70%); text-align: center; }
     .kontakt-inner { max-width: 680px; margin: 0 auto; }
     .kontakt-form {
@@ -727,7 +626,6 @@
     .contact-item .ci-label { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); display: block; margin-bottom: 0.3rem; }
     .contact-item .ci-value { font-size: 0.95rem; color: var(--white); }
 
-    /* ── FOOTER ── */
     footer {
       background: #060608;
       padding: 2.5rem 4rem;
@@ -744,7 +642,6 @@
     .footer-links a { font-size: 0.78rem; color: var(--text-muted); text-decoration: none; transition: color 0.3s; }
     .footer-links a:hover { color: var(--gold); }
 
-    /* ── ANIMATIONS ── */
     .fade-in {
       opacity: 0;
       transform: translateY(30px);
@@ -752,7 +649,6 @@
     }
     .fade-in.visible { opacity: 1; transform: translateY(0); }
 
-    /* ── CURSOR GLOW ── */
     .cursor-glow {
       position: fixed;
       width: 300px;
@@ -765,13 +661,10 @@
       transition: top 0.1s, left 0.1s;
     }
 
-    /* ── RESPONSIVE ── */
     @media (max-width: 1024px) {
       nav { padding: 1.2rem 2rem; }
       section { padding: 5rem 2rem; }
       .angebote-grid { grid-template-columns: 1fr 1fr; }
-      .ablauf-steps { grid-template-columns: 1fr 1fr; }
-      .ablauf-steps::before { display: none; }
       #about { gap: 3rem; padding: 4rem 2rem; }
     }
 
@@ -780,9 +673,7 @@
       .nav-links { display: none; }
       .nav-cta { display: none; }
       .hamburger { display: flex; }
-
       section { padding: 4rem 1.25rem; }
-
       #about {
         grid-template-columns: 1fr;
         gap: 2.5rem;
@@ -794,37 +685,22 @@
       .about-text h2 { font-size: 2rem; }
       .about-stats { grid-template-columns: 1fr 1fr 1fr; gap: 1rem; }
       .stat-item .num { font-size: 1.5rem; }
-
       .angebote-grid { grid-template-columns: 1fr; }
-      .angebote-grid + div { grid-template-columns: 1fr !important; }
-
-      .ablauf-steps { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
-      .ablauf-steps::before { display: none; }
-
-      .testi-grid { grid-template-columns: 1fr; }
-
+      .angebote-extra { grid-template-columns: 1fr !important; }
       .kontakt-form { grid-template-columns: 1fr; }
       .form-group.full { grid-column: 1; }
       .form-submit { grid-column: 1; }
       .form-note { grid-column: 1; }
-
       footer { flex-direction: column; text-align: center; padding: 2rem 1.25rem; }
       .footer-links { justify-content: center; }
-
-      #kunden { padding: 3rem 1.25rem; }
-      .logos-row { gap: 1.5rem; }
-
       .hero-desc { font-size: 0.95rem; }
       .hero-scroll { display: none; }
-
       .contact-info { gap: 2rem; }
-
       .cursor-glow { display: none; }
     }
 
     @media (max-width: 480px) {
       .about-stats { grid-template-columns: 1fr 1fr; }
-      .ablauf-steps { grid-template-columns: 1fr; }
       .hero-btns { flex-direction: column; align-items: center; }
       .btn-primary, .btn-secondary { width: 100%; max-width: 280px; text-align: center; }
       .faq-question span { font-size: 0.9rem; }
@@ -832,29 +708,21 @@
   </style>
 </head>
 <body>
-
-  <!-- CURSOR GLOW (desktop only) -->
   <div class="cursor-glow" id="cursorGlow"></div>
 
-  <!-- MOBILE MENU OVERLAY -->
   <div class="mobile-menu" id="mobileMenu">
     <a href="#about" onclick="closeMenu()">Über mich</a>
     <a href="#angebote" onclick="closeMenu()">Angebote</a>
-    <a href="#ablauf" onclick="closeMenu()">Ablauf</a>
     <a href="#faq" onclick="closeMenu()">FAQ</a>
-    <a href="#referenzen" onclick="closeMenu()">Referenzen</a>
     <a href="#kontakt" onclick="closeMenu()" class="mobile-cta">Jetzt anfragen</a>
   </div>
 
-  <!-- NAV -->
   <nav id="navbar">
     <a href="#hero" class="nav-logo">Max <span>Musterzauberer</span></a>
     <ul class="nav-links">
       <li><a href="#about">Über mich</a></li>
       <li><a href="#angebote">Angebote</a></li>
-      <li><a href="#ablauf">Ablauf</a></li>
       <li><a href="#faq">FAQ</a></li>
-      <li><a href="#referenzen">Referenzen</a></li>
     </ul>
     <div class="nav-right">
       <a href="#kontakt" class="nav-cta">Anfragen</a>
@@ -866,7 +734,6 @@
     </div>
   </nav>
 
-  <!-- HERO -->
   <section id="hero">
     <div class="hero-particles" id="particles"></div>
     <div class="hero-lines"></div>
@@ -891,20 +758,6 @@
     </div>
   </section>
 
-  <!-- KUNDEN-LOGOS -->
-  <div id="kunden">
-    <p class="kunden-label">Vertrauen von führenden Unternehmen & Veranstaltern</p>
-    <div class="logos-row">
-      <span class="logo-item">Daimler AG</span>
-      <span class="logo-item">Marriott Hotels</span>
-      <span class="logo-item">Allianz Group</span>
-      <span class="logo-item">Deutsche Bank</span>
-      <span class="logo-item">Porsche Events</span>
-      <span class="logo-item">Grand Hyatt</span>
-    </div>
-  </div>
-
-  <!-- ABOUT -->
   <section id="about">
     <div class="about-visual fade-in">
       <div class="about-img-frame">
@@ -967,7 +820,6 @@
     </div>
   </section>
 
-  <!-- ANGEBOTE -->
   <section id="angebote">
     <p class="section-eyebrow">✦ Leistungen</p>
     <h2 class="section-title">Das richtige Format<br>für jeden Anlass</h2>
@@ -1033,42 +885,11 @@
     </div>
   </section>
 
-  <!-- ABLAUF -->
-  <section id="ablauf">
-    <p class="section-eyebrow">✦ So läuft es ab</p>
-    <h2 class="section-title">Vier Schritte bis zum<br>perfekten Abend</h2>
-    <p class="section-sub">Unkompliziert, persönlich, professionell — von der ersten Anfrage bis zum letzten Applaus.</p>
-    <div class="ablauf-steps">
-      <div class="step fade-in">
-        <div class="step-num">01</div>
-        <h3>Anfrage & Gespräch</h3>
-        <p>Sie schildern Ihren Anlass, Ihre Gäste und Ihre Wünsche. Max hört zu und berät ehrlich.</p>
-      </div>
-      <div class="step fade-in">
-        <div class="step-num">02</div>
-        <h3>Maßgeschneidertes Konzept</h3>
-        <p>Gemeinsam entsteht ein individuelles Programm — abgestimmt auf Ihre Location, Stimmung und Gästezahl.</p>
-      </div>
-      <div class="step fade-in">
-        <div class="step-num">03</div>
-        <h3>Buchung & Briefing</h3>
-        <p>Klare Konditionen, transparente Preise. Kurzes Briefing vor Ort oder per Video-Call — fertig.</p>
-      </div>
-      <div class="step fade-in">
-        <div class="step-num">04</div>
-        <h3>Ihr unvergesslicher Abend</h3>
-        <p>Max kommt pünktlich, professionell und bereitet — und sorgt für Momente, die Ihre Gäste nie vergessen.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
   <section id="faq">
     <p class="section-eyebrow">✦ Häufige Fragen</p>
     <h2 class="section-title">Antworten auf Ihre<br>wichtigsten Fragen</h2>
     <p class="section-sub">Noch unsicher? Hier finden Sie die Antworten auf die häufigsten Fragen rund um eine Buchung.</p>
     <div class="faq-list">
-
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
           <span>Wie weit im Voraus sollte ich buchen?</span>
@@ -1078,7 +899,6 @@
           <p>Für Firmenfeiern und Hochzeiten empfehle ich eine Buchung mindestens 3–6 Monate im Voraus, da beliebte Termine schnell vergeben sind. Für kleinere Events ist manchmal auch kurzfristig noch etwas möglich — einfach anfragen!</p>
         </div>
       </div>
-
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
           <span>Wie weit reisen Sie an?</span>
@@ -1088,17 +908,15 @@
           <p>Ich bin bundesweit im Einsatz — von Hamburg bis München, von Köln bis Berlin. Anfahrtskosten werden transparent nach Distanz berechnet. Internationale Auftritte sind auf Anfrage ebenfalls möglich.</p>
         </div>
       </div>
-
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
           <span>Was benötigen Sie vor Ort?</span>
           <div class="faq-icon">+</div>
         </button>
         <div class="faq-answer">
-          <p>Für Close-Up Magic brauche ich gar nichts außer Ihren Gästen. Für Parlour Shows reicht ein freier Bereich von ca. 3×3 Metern. Für Bühnenshows gibt es einen genauen technischen Rider — den besprechen wir im Vorfeld gemeinsam.</p>
+          <p>Für Close-Up Magic brauche ich gar nichts außer Ihren Gästen. Für Parlour Shows reicht ein freier Bereich von ca. 3x3 Metern. Für Bühnenshows gibt es einen genauen technischen Rider — den besprechen wir im Vorfeld gemeinsam.</p>
         </div>
       </div>
-
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
           <span>Gibt es eine Mindestbuchungsdauer?</span>
@@ -1108,7 +926,6 @@
           <p>Für Close-Up Magic liegt das Minimum bei 1,5 Stunden — das ist die Mindestzeit, damit alle Gäste hautnah in den Genuss kommen. Parlour- und Bühnenshows werden als Komplettpaket gebucht.</p>
         </div>
       </div>
-
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
           <span>Ist das Programm für alle Altersgruppen geeignet?</span>
@@ -1118,7 +935,6 @@
           <p>Ja — mein Programm richtet sich an Erwachsene und ist für gemischte Gruppen ab ca. 16 Jahren konzipiert. Es ist anspruchsvoll, witzig und niemals kindlich. Kinder-Geburtstage sind nicht mein Spezialgebiet.</p>
         </div>
       </div>
-
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
           <span>Kann das Programm auf unser Unternehmen oder Thema zugeschnitten werden?</span>
@@ -1128,66 +944,18 @@
           <p>Absolut. Für Firmenkunden integriere ich gerne Produkte, Markenbotschaften oder interne Jokes in die Show. Das macht den Auftritt besonders und sorgt für echte Aha-Momente, die im Gedächtnis bleiben.</p>
         </div>
       </div>
-
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
           <span>Was kostet eine Buchung ungefähr?</span>
           <div class="faq-icon">+</div>
         </button>
         <div class="faq-answer">
-          <p>Die Preise richten sich nach Format, Dauer und Aufwand. Close-Up Magic beginnt ab ca. 800 €, Parlour Shows ab ca. 1.500 €, Bühnenshows ab ca. 3.000 €. Für ein genaues Angebot einfach anfragen — ich antworte persönlich.</p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- REFERENZEN -->
-  <section id="referenzen">
-    <p class="section-eyebrow">✦ Das sagen Kunden</p>
-    <h2 class="section-title">Stimmen, die<br>für sich sprechen</h2>
-    <p class="section-sub">Über 400 Events im Jahr — und fast ebenso viele Dankesworte, die uns antreiben.</p>
-    <div class="testi-grid">
-      <div class="testi-card fade-in">
-        <div class="stars">★★★★★</div>
-        <div class="testi-quote">"</div>
-        <p class="testi-text">Max hat unsere Weihnachtsfeier in etwas Außergewöhnliches verwandelt. Die Gäste standen noch Stunden später zusammen und diskutierten, wie er das gemacht hat. Absolute Buchungsempfehlung.</p>
-        <div class="testi-author">
-          <div class="testi-avatar">👩‍💼</div>
-          <div>
-            <div class="testi-name">Sabine Kröger</div>
-            <div class="testi-role">HR-Managerin, Allianz Group</div>
-          </div>
-        </div>
-      </div>
-      <div class="testi-card fade-in">
-        <div class="stars">★★★★★</div>
-        <div class="testi-quote">"</div>
-        <p class="testi-text">Wir haben Max für unsere Hochzeit gebucht — Close-Up beim Empfang. Unsere Gäste waren vollkommen begeistert, sogar meine skeptische Schwiegermutter. Einfach perfekt.</p>
-        <div class="testi-author">
-          <div class="testi-avatar">👰</div>
-          <div>
-            <div class="testi-name">Julia & Tobias Wermke</div>
-            <div class="testi-role">Hochzeit, Heidelberg 2024</div>
-          </div>
-        </div>
-      </div>
-      <div class="testi-card fade-in">
-        <div class="stars">★★★★★</div>
-        <div class="testi-quote">"</div>
-        <p class="testi-text">Als Eventmanager habe ich viele Acts gebucht — Max ist einer der wenigen, bei dem ich wirklich nicht weiß wie er es macht. Und das nach 20 Jahren in der Branche.</p>
-        <div class="testi-author">
-          <div class="testi-avatar">👨‍💼</div>
-          <div>
-            <div class="testi-name">Rainer Falk</div>
-            <div class="testi-role">Eventmanager, Marriott Frankfurt</div>
-          </div>
+          <p>Die Preise richten sich nach Format, Dauer und Aufwand. Close-Up Magic beginnt ab ca. 800 EUR, Parlour Shows ab ca. 1.500 EUR, Bühnenshows ab ca. 3.000 EUR. Für ein genaues Angebot einfach anfragen — ich antworte persönlich.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- KONTAKT -->
   <section id="kontakt">
     <div class="kontakt-inner">
       <p class="section-eyebrow">✦ Kontakt</p>
@@ -1214,7 +982,7 @@
         <div class="form-group">
           <label>Art des Events</label>
           <select>
-            <option value="">Bitte wählen …</option>
+            <option value="">Bitte wählen ...</option>
             <option>Firmenfeier / Corporate Event</option>
             <option>Hochzeit</option>
             <option>Geburtstagsfeier</option>
@@ -1225,7 +993,7 @@
         <div class="form-group">
           <label>Gewünschtes Format</label>
           <select>
-            <option value="">Bitte wählen …</option>
+            <option value="">Bitte wählen ...</option>
             <option>Close-Up Magic</option>
             <option>Parlour Show</option>
             <option>Bühnenshow</option>
@@ -1235,7 +1003,7 @@
         </div>
         <div class="form-group full">
           <label>Ihre Nachricht</label>
-          <textarea placeholder="Datum des Events, Ort, Gästezahl, besondere Wünsche …"></textarea>
+          <textarea placeholder="Datum des Events, Ort, Gästezahl, besondere Wünsche ..."></textarea>
         </div>
         <div class="form-submit">
           <button type="submit" class="btn-primary">Anfrage absenden ✦</button>
@@ -1262,7 +1030,6 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <div class="footer-logo">Max Musterzauberer</div>
     <p class="footer-copy">© 2026 Max Musterzauberer – Zauberer & Mentalist. Alle Rechte vorbehalten.</p>
@@ -1273,7 +1040,6 @@
     </div>
   </footer>
 
-  <!-- SUCCESS MODAL -->
   <div id="modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.85);z-index:999;align-items:center;justify-content:center;padding:1rem;">
     <div style="background:var(--dark2);border:1px solid rgba(201,168,76,0.3);border-radius:4px;padding:3rem 2rem;text-align:center;max-width:420px;width:100%;">
       <div style="font-size:3rem;margin-bottom:1rem;">✨</div>
@@ -1284,20 +1050,19 @@
   </div>
 
   <script>
-    // ── CURSOR GLOW ──
     const glow = document.getElementById('cursorGlow');
     document.addEventListener('mousemove', e => {
-      glow.style.left = e.clientX + 'px';
-      glow.style.top = e.clientY + 'px';
+      if (glow) {
+        glow.style.left = e.clientX + 'px';
+        glow.style.top = e.clientY + 'px';
+      }
     });
 
-    // ── NAVBAR SCROLL ──
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
       navbar.classList.toggle('scrolled', window.scrollY > 50);
     });
 
-    // ── HAMBURGER MENU ──
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');
     let menuOpen = false;
@@ -1316,12 +1081,10 @@
       document.body.style.overflow = '';
     }
 
-    // Close mobile menu on resize to desktop
     window.addEventListener('resize', () => {
       if (window.innerWidth > 768) closeMenu();
     });
 
-    // ── PARTICLES ──
     const container = document.getElementById('particles');
     for (let i = 0; i < 25; i++) {
       const p = document.createElement('div');
@@ -1336,7 +1099,6 @@
       container.appendChild(p);
     }
 
-    // ── FADE-IN ON SCROLL ──
     const observer = new IntersectionObserver(entries => {
       entries.forEach(e => {
         if (e.isIntersecting) {
@@ -1349,17 +1111,13 @@
     }, { threshold: 0.1 });
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-    // ── FAQ ACCORDION ──
     function toggleFaq(btn) {
       const item = btn.closest('.faq-item');
       const isOpen = item.classList.contains('open');
-      // Close all
       document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-      // Open clicked if it was closed
       if (!isOpen) item.classList.add('open');
     }
 
-    // ── FORM SUBMIT ──
     function handleSubmit(e) {
       e.preventDefault();
       document.getElementById('modal').style.display = 'flex';
