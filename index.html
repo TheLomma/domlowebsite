@@ -3,36 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Max Musterzauberer – Zauberer & Mentalist für Firmenfeiern, Hochzeiten & Events</title>
+  <title>Dominik Lohmar – Zauberer & Mentalist für Firmenfeiern, Hochzeiten & Events</title>
 
-  <meta name="description" content="Max Musterzauberer – professioneller Zauberer & Mentalist aus Köln. Close-Up Magic, Parlour Shows & Bühnenshows für Firmenfeiern, Hochzeiten und Geburtstage. Jetzt anfragen!" />
-  <meta name="keywords" content="Zauberer, Mentalist, Close-Up Magic, Hochzeit, Firmenfeier, Geburtstag, Bühnenshow, Köln, buchen" />
-  <meta name="author" content="Max Musterzauberer" />
+  <meta name="description" content="Dominik Lohmar – professioneller Zauberer & Mentalist. Close-Up Magic, Parlour Shows und Bühnenshows für Firmenfeiern, Hochzeiten und besondere Events." />
+  <meta name="keywords" content="Dominik Lohmar, Zauberer, Mentalist, Close-Up Magic, Hochzeit, Firmenfeier, Eventzauberer" />
+  <meta name="author" content="Dominik Lohmar" />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://www.maxmusterzauberer.de/" />
+  <link rel="canonical" href="https://www.dominiklohmar.de/" />
 
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.maxmusterzauberer.de/" />
-  <meta property="og:title" content="Max Musterzauberer – Zauberer & Mentalist" />
-  <meta property="og:description" content="Professionelle Zauberkunst & Mentalismus für Firmenfeiern, Hochzeiten und Events. Hautnah, elegant, unvergesslich." />
-  <meta property="og:image" content="https://www.maxmusterzauberer.de/og-image.jpg" />
+  <meta property="og:url" content="https://www.dominiklohmar.de/" />
+  <meta property="og:title" content="Dominik Lohmar – Zauberer & Mentalist" />
+  <meta property="og:description" content="Moderne Zauberkunst und Mentalismus für stilvolle Events, Firmenfeiern und Hochzeiten." />
+  <meta property="og:image" content="https://www.dominiklohmar.de/og-image.jpg" />
   <meta property="og:locale" content="de_DE" />
-  <meta property="og:site_name" content="Max Musterzauberer" />
+  <meta property="og:site_name" content="Dominik Lohmar" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Max Musterzauberer – Zauberer & Mentalist" />
-  <meta name="twitter:description" content="Professionelle Zauberkunst & Mentalismus für Firmenfeiern, Hochzeiten und Events." />
-  <meta name="twitter:image" content="https://www.maxmusterzauberer.de/og-image.jpg" />
+  <meta name="twitter:title" content="Dominik Lohmar – Zauberer & Mentalist" />
+  <meta name="twitter:description" content="Moderne Zauberkunst und Mentalismus für stilvolle Events, Firmenfeiern und Hochzeiten." />
+  <meta name="twitter:image" content="https://www.dominiklohmar.de/og-image.jpg" />
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "Max Musterzauberer",
-    "description": "Professioneller Zauberer & Mentalist für Firmenfeiern, Hochzeiten, Geburtstage und Events in ganz Deutschland.",
-    "url": "https://www.maxmusterzauberer.de",
+    "name": "Dominik Lohmar",
+    "description": "Professioneller Zauberer & Mentalist für Firmenfeiern, Hochzeiten, Geburtstage und Events in Deutschland.",
+    "url": "https://www.dominiklohmar.de",
     "telephone": "+49-221-987-654-30",
-    "email": "hallo@maxmusterzauberer.de",
+    "email": "hallo@dominiklohmar.de",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Köln",
@@ -40,670 +40,826 @@
     },
     "areaServed": "DE",
     "priceRange": "€€",
-    "image": "https://www.maxmusterzauberer.de/og-image.jpg"
+    "image": "https://www.dominiklohmar.de/og-image.jpg"
   }
   </script>
 
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --gold: #c9a84c;
-      --gold-light: #e8c97a;
-      --dark: #0a0a0f;
-      --dark2: #111118;
-      --dark3: #1a1a25;
-      --text: #e8e8f0;
-      --text-muted: #888899;
-      --white: #ffffff;
+      --bg: #0b0b10;
+      --bg-soft: #12121a;
+      --bg-card: #171722;
+      --text: #f3f3f6;
+      --muted: #a1a1b3;
+      --line: rgba(255,255,255,0.08);
+      --accent: #c9a84c;
+      --accent-strong: #e0bf66;
+      --accent-soft: rgba(201,168,76,0.14);
+      --shadow: 0 18px 50px rgba(0,0,0,0.22);
+      --hero: radial-gradient(ellipse at 50% 60%, #1b1730 0%, #0b0b10 72%);
+      --nav: rgba(11,11,16,0.82);
+    }
+
+    body.light-mode {
+      --bg: #f7f5ef;
+      --bg-soft: #ffffff;
+      --bg-card: #fcfbf8;
+      --text: #1f2230;
+      --muted: #666b7d;
+      --line: rgba(31,34,48,0.12);
+      --accent: #b78d2c;
+      --accent-strong: #8c6a18;
+      --accent-soft: rgba(183,141,44,0.12);
+      --shadow: 0 16px 35px rgba(31,34,48,0.08);
+      --hero: radial-gradient(ellipse at 50% 55%, #f3e9cf 0%, #f7f5ef 70%);
+      --nav: rgba(247,245,239,0.82);
     }
 
     html { scroll-behavior: smooth; }
 
     body {
       font-family: 'Inter', sans-serif;
-      background: var(--dark);
+      background: var(--bg);
       color: var(--text);
       overflow-x: hidden;
+      transition: background 0.25s ease, color 0.25s ease;
     }
 
-    ::-webkit-scrollbar { width: 6px; }
-    ::-webkit-scrollbar-track { background: var(--dark); }
-    ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 10px; }
+
+    a { color: inherit; }
 
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
-      z-index: 200;
-      padding: 1.2rem 4rem;
+      z-index: 220;
+      padding: 1rem 3rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      background: linear-gradient(to bottom, rgba(10,10,15,0.95), transparent);
-      backdrop-filter: blur(6px);
-      transition: background 0.3s;
+      backdrop-filter: blur(10px);
+      background: linear-gradient(to bottom, var(--nav), transparent);
+      transition: background 0.25s ease, border-color 0.25s ease;
     }
+
     nav.scrolled {
-      background: rgba(10,10,15,0.97);
-      border-bottom: 1px solid rgba(201,168,76,0.15);
+      background: var(--nav);
+      border-bottom: 1px solid var(--line);
     }
+
     .nav-logo {
       font-family: 'Playfair Display', serif;
       font-size: 1.4rem;
-      color: var(--gold);
-      letter-spacing: 0.05em;
       text-decoration: none;
-      z-index: 201;
+      color: var(--text);
+      letter-spacing: 0.02em;
+      white-space: nowrap;
     }
-    .nav-logo span { color: var(--text); font-style: italic; }
-    .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+
+    .nav-logo span { color: var(--accent); }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+      align-items: center;
+    }
+
     .nav-links a {
-      color: var(--text-muted);
       text-decoration: none;
-      font-size: 0.85rem;
+      color: var(--muted);
+      font-size: 0.84rem;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      transition: color 0.3s;
+      transition: color 0.2s ease;
     }
-    .nav-links a:hover { color: var(--gold); }
-    .nav-right { display: flex; align-items: center; gap: 1rem; }
+
+    .nav-links a:hover { color: var(--accent); }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .theme-toggle,
     .nav-cta {
-      background: transparent;
-      border: 1px solid var(--gold);
-      color: var(--gold);
-      padding: 0.55rem 1.4rem;
-      border-radius: 2px;
-      font-size: 0.8rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      cursor: pointer;
-      text-decoration: none;
-      transition: all 0.3s;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--bg-soft);
+      color: var(--text);
+      height: 42px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
     }
-    .nav-cta:hover { background: var(--gold); color: var(--dark); }
+
+    .theme-toggle {
+      width: 42px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .theme-toggle:hover,
+    .nav-cta:hover {
+      border-color: var(--accent);
+      transform: translateY(-1px);
+    }
+
+    .nav-cta {
+      padding: 0 1rem;
+      text-decoration: none;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
 
     .hamburger {
       display: none;
-      flex-direction: column;
-      gap: 5px;
+      width: 42px;
+      height: 42px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--bg-soft);
       cursor: pointer;
-      padding: 4px;
-      z-index: 201;
-      background: none;
-      border: none;
+      position: relative;
     }
+
     .hamburger span {
-      display: block;
-      width: 26px;
+      position: absolute;
+      left: 11px;
+      right: 11px;
       height: 2px;
-      background: var(--gold);
-      border-radius: 2px;
-      transition: all 0.35s ease;
-      transform-origin: center;
+      background: var(--text);
+      transition: all 0.2s ease;
     }
-    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-    .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
-    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .hamburger span:nth-child(1) { top: 14px; }
+    .hamburger span:nth-child(2) { top: 20px; }
+    .hamburger span:nth-child(3) { top: 26px; }
+
+    .hamburger.open span:nth-child(1) { transform: rotate(45deg); top: 20px; }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: rotate(-45deg); top: 20px; }
 
     .mobile-menu {
       display: none;
       position: fixed;
       inset: 0;
-      background: rgba(10,10,15,0.98);
-      z-index: 199;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 2.5rem;
-      opacity: 0;
-      transition: opacity 0.3s;
+      z-index: 210;
+      background: color-mix(in srgb, var(--bg) 94%, transparent);
+      backdrop-filter: blur(8px);
+      padding: 6rem 1.5rem 2rem;
     }
-    .mobile-menu.open {
+
+    .mobile-menu.open { display: block; }
+
+    .mobile-menu-inner {
       display: flex;
-      opacity: 1;
+      flex-direction: column;
+      gap: 1rem;
+      background: var(--bg-soft);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 1.25rem;
+      box-shadow: var(--shadow);
     }
+
     .mobile-menu a {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      color: var(--white);
       text-decoration: none;
-      letter-spacing: 0.05em;
-      transition: color 0.3s;
-    }
-    .mobile-menu a:hover { color: var(--gold); }
-    .mobile-menu .mobile-cta {
-      margin-top: 1rem;
-      background: var(--gold);
-      color: var(--dark);
-      padding: 0.9rem 2.5rem;
-      font-family: 'Inter', sans-serif;
-      font-size: 0.85rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      font-weight: 600;
-      border-radius: 2px;
-    }
-
-    #hero {
-      position: relative;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      overflow: hidden;
-      background: radial-gradient(ellipse at 50% 60%, #1a1428 0%, var(--dark) 70%);
-    }
-    .hero-particles {
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      overflow: hidden;
-    }
-    .particle {
-      position: absolute;
-      border-radius: 50%;
-      background: var(--gold);
-      opacity: 0;
-      animation: float-particle linear infinite;
-    }
-    @keyframes float-particle {
-      0% { transform: translateY(100vh) scale(0); opacity: 0; }
-      10% { opacity: 0.6; }
-      90% { opacity: 0.2; }
-      100% { transform: translateY(-10vh) scale(1); opacity: 0; }
-    }
-    .hero-lines {
-      position: absolute;
-      inset: 0;
-      background-image:
-        radial-gradient(circle at 20% 50%, rgba(201,168,76,0.04) 0%, transparent 50%),
-        radial-gradient(circle at 80% 30%, rgba(201,168,76,0.04) 0%, transparent 50%);
-    }
-    .hero-content { position: relative; z-index: 2; max-width: 800px; padding: 2rem 1.5rem; }
-    .hero-eyebrow {
-      display: inline-block;
-      font-size: 0.75rem;
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 1.5rem;
-      padding: 0.4rem 1.2rem;
-      border: 1px solid rgba(201,168,76,0.3);
-      border-radius: 2px;
-    }
-    .hero-title {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2.8rem, 8vw, 6.5rem);
-      line-height: 1.05;
-      color: var(--white);
-      margin-bottom: 0.3rem;
-    }
-    .hero-title .gold { color: var(--gold); }
-    .hero-title .italic { font-style: italic; }
-    .hero-sub {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(1rem, 2.5vw, 1.5rem);
-      font-style: italic;
-      color: var(--text-muted);
-      margin-bottom: 2rem;
-      letter-spacing: 0.05em;
-    }
-    .hero-desc {
-      font-size: 1rem;
-      color: var(--text-muted);
-      line-height: 1.8;
-      max-width: 520px;
-      margin: 0 auto 3rem;
-    }
-    .hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-    .btn-primary {
-      background: var(--gold);
-      color: var(--dark);
-      padding: 0.9rem 2.2rem;
-      border: none;
-      font-size: 0.85rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      font-weight: 600;
-      cursor: pointer;
-      border-radius: 2px;
-      text-decoration: none;
-      transition: all 0.3s;
-      display: inline-block;
-    }
-    .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(201,168,76,0.3); }
-    .btn-secondary {
-      background: transparent;
+      padding: 0.95rem 1rem;
+      border-radius: 16px;
+      background: var(--bg-card);
       color: var(--text);
-      padding: 0.9rem 2.2rem;
-      border: 1px solid rgba(255,255,255,0.2);
-      font-size: 0.85rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      cursor: pointer;
-      border-radius: 2px;
-      text-decoration: none;
-      transition: all 0.3s;
-      display: inline-block;
-    }
-    .btn-secondary:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
-    .hero-scroll {
-      position: absolute;
-      bottom: 2.5rem;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.5rem;
-      color: var(--text-muted);
-      font-size: 0.7rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      animation: bounce 2s infinite;
-    }
-    .scroll-line {
-      width: 1px;
-      height: 40px;
-      background: linear-gradient(to bottom, var(--gold), transparent);
-    }
-    @keyframes bounce {
-      0%, 100% { transform: translateX(-50%) translateY(0); }
-      50% { transform: translateX(-50%) translateY(8px); }
+      font-weight: 500;
     }
 
-    .gold-divider {
-      width: 60px;
-      height: 1px;
-      background: linear-gradient(to right, transparent, var(--gold), transparent);
-      margin: 0 auto 1.5rem;
-    }
+    section { padding: 6rem 3rem; }
 
-    section { padding: 7rem 4rem; }
     .section-eyebrow {
-      font-size: 0.72rem;
-      letter-spacing: 0.3em;
+      color: var(--accent);
+      font-size: 0.78rem;
+      letter-spacing: 0.25em;
       text-transform: uppercase;
-      color: var(--gold);
       text-align: center;
       margin-bottom: 0.8rem;
     }
+
     .section-title {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(2rem, 4vw, 3rem);
+      font-size: clamp(2rem, 4vw, 3.2rem);
       text-align: center;
-      color: var(--white);
+      line-height: 1.1;
       margin-bottom: 1rem;
-      line-height: 1.2;
     }
+
     .section-sub {
+      max-width: 640px;
+      margin: 0 auto 3rem;
       text-align: center;
-      color: var(--text-muted);
-      font-size: 1rem;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    #hero {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      position: relative;
+      overflow: hidden;
+      background: var(--hero);
+    }
+
+    .hero-particles,
+    .hero-lines {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+
+    .hero-lines {
+      background-image:
+        radial-gradient(circle at 20% 35%, var(--accent-soft) 0%, transparent 35%),
+        radial-gradient(circle at 80% 25%, var(--accent-soft) 0%, transparent 35%);
+      opacity: 0.75;
+    }
+
+    .particle {
+      position: absolute;
+      border-radius: 999px;
+      background: var(--accent);
+      opacity: 0;
+      animation: floatParticle linear infinite;
+    }
+
+    @keyframes floatParticle {
+      0% { transform: translateY(100vh) scale(0.4); opacity: 0; }
+      12% { opacity: 0.35; }
+      88% { opacity: 0.15; }
+      100% { transform: translateY(-10vh) scale(1); opacity: 0; }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 860px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.45rem 0.9rem;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      font-size: 0.75rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: color-mix(in srgb, var(--bg-soft) 75%, transparent);
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3rem, 8vw, 6.2rem);
+      line-height: 0.98;
+      margin-bottom: 0.8rem;
+    }
+
+    .hero-title .accent { color: var(--accent); }
+
+    .hero-sub {
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      color: var(--muted);
+      max-width: 640px;
+      margin: 0 auto 2rem;
       line-height: 1.8;
-      max-width: 560px;
-      margin: 0 auto 4rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+      min-height: 48px;
+      padding: 0 1.25rem;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: all 0.2s ease;
+      border: 1px solid transparent;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #111;
+      font-weight: 600;
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-strong);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      border-color: var(--line);
+      background: var(--bg-soft);
+      color: var(--text);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateY(-1px);
     }
 
     #about {
-      background: var(--dark2);
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 5rem;
-      align-items: center;
-      max-width: 1200px;
+      max-width: 1180px;
       margin: 0 auto;
-      border-radius: 4px;
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 3rem;
+      align-items: center;
     }
-    .about-visual {
-      position: relative;
-      height: 520px;
+
+    .about-card,
+    .angebot-card,
+    .faq-item,
+    .contact-shell {
+      background: var(--bg-soft);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
     }
-    .about-img-frame {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, var(--dark3) 0%, #1e1430 100%);
-      border-radius: 4px;
-      overflow: hidden;
+
+    .about-card {
+      border-radius: 28px;
+      padding: 2rem;
+      min-height: 440px;
       display: flex;
       align-items: center;
       justify-content: center;
-    }
-    .about-badge {
-      position: absolute;
-      bottom: 2rem;
-      right: -1rem;
-      background: var(--gold);
-      color: var(--dark);
-      padding: 1.5rem;
-      border-radius: 4px;
-      text-align: center;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
-    }
-    .about-badge .num {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.5rem;
-      font-weight: 700;
-      line-height: 1;
-      display: block;
-    }
-    .about-badge .label {
-      font-size: 0.7rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      font-weight: 600;
-    }
-    .about-frame-border {
-      position: absolute;
-      top: 1.5rem;
-      left: -1.5rem;
-      right: 1.5rem;
-      bottom: -1.5rem;
-      border: 1px solid rgba(201,168,76,0.25);
-      border-radius: 4px;
-      z-index: -1;
-    }
-    .about-text .eyebrow {
-      font-size: 0.72rem;
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 1rem;
-    }
-    .about-text h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.5rem;
-      color: var(--white);
-      margin-bottom: 1.5rem;
-      line-height: 1.2;
-    }
-    .about-text h2 em { color: var(--gold); font-style: italic; }
-    .about-text p {
-      color: var(--text-muted);
-      line-height: 1.9;
-      margin-bottom: 1.2rem;
-      font-size: 0.97rem;
-    }
-    .about-stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-      margin-top: 2.5rem;
-      padding-top: 2.5rem;
-      border-top: 1px solid rgba(255,255,255,0.06);
-    }
-    .stat-item .num {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      color: var(--gold);
-      display: block;
-    }
-    .stat-item .label {
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
-
-    #angebote { background: var(--dark); }
-    .angebote-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-    .angebot-card {
-      background: var(--dark2);
-      border: 1px solid rgba(255,255,255,0.06);
-      border-radius: 4px;
-      padding: 2.5rem 2rem;
-      transition: all 0.4s;
       position: relative;
       overflow: hidden;
-      cursor: default;
-    }
-    .angebot-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 2px;
-      background: linear-gradient(to right, transparent, var(--gold), transparent);
-      opacity: 0;
-      transition: opacity 0.4s;
-    }
-    .angebot-card:hover { border-color: rgba(201,168,76,0.3); transform: translateY(-6px); box-shadow: 0 30px 80px rgba(0,0,0,0.4); }
-    .angebot-card:hover::before { opacity: 1; }
-    .angebot-card.featured {
-      background: linear-gradient(135deg, #1e1830 0%, #1a1528 100%);
-      border-color: rgba(201,168,76,0.3);
-    }
-    .angebot-card.featured::before { opacity: 1; }
-    .card-icon { font-size: 2.2rem; margin-bottom: 1.5rem; display: block; }
-    .card-tag {
-      display: inline-block;
-      font-size: 0.65rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--gold);
-      background: rgba(201,168,76,0.1);
-      border: 1px solid rgba(201,168,76,0.2);
-      padding: 0.25rem 0.7rem;
-      border-radius: 2px;
-      margin-bottom: 1rem;
-    }
-    .card-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.5rem;
-      color: var(--white);
-      margin-bottom: 1rem;
-    }
-    .card-desc {
-      color: var(--text-muted);
-      font-size: 0.9rem;
-      line-height: 1.8;
-      margin-bottom: 1.5rem;
-    }
-    .card-list { list-style: none; }
-    .card-list li {
-      color: var(--text-muted);
-      font-size: 0.85rem;
-      padding: 0.4rem 0;
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-    }
-    .card-list li::before {
-      content: '';
-      width: 16px;
-      height: 1px;
-      background: var(--gold);
-      flex-shrink: 0;
     }
 
-    #faq { background: var(--dark); }
-    .faq-list {
-      max-width: 760px;
-      margin: 0 auto;
+    .about-card::after {
+      content: "";
+      position: absolute;
+      inset: auto -10% -20% auto;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: var(--accent-soft);
+      filter: blur(10px);
+    }
+
+    .about-visual-inner {
+      position: relative;
+      z-index: 1;
+      text-align: center;
       display: flex;
       flex-direction: column;
       gap: 1rem;
+      align-items: center;
     }
+
+    .about-icon {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: var(--bg-card);
+      border: 1px solid var(--line);
+      font-size: 2.8rem;
+    }
+
+    .about-mini {
+      display: inline-flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .mini-badge {
+      padding: 0.65rem 0.9rem;
+      border-radius: 999px;
+      background: var(--bg-card);
+      border: 1px solid var(--line);
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .about-text .eyebrow {
+      color: var(--accent);
+      font-size: 0.78rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      margin-bottom: 0.9rem;
+    }
+
+    .about-text h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.1;
+      margin-bottom: 1.2rem;
+    }
+
+    .about-text p {
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .about-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .stat-item {
+      padding: 1rem;
+      border-radius: 20px;
+      background: var(--bg-soft);
+      border: 1px solid var(--line);
+      text-align: center;
+    }
+
+    .stat-item .num {
+      display: block;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.7rem;
+      color: var(--accent);
+      margin-bottom: 0.3rem;
+    }
+
+    .stat-item .label {
+      font-size: 0.76rem;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    #angebote { background: transparent; }
+
+    .angebote-grid,
+    .angebote-extra {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: grid;
+      gap: 1.25rem;
+    }
+
+    .angebote-grid { grid-template-columns: repeat(3, 1fr); }
+    .angebote-extra { grid-template-columns: repeat(2, 1fr); margin-top: 1.25rem; }
+
+    .angebot-card {
+      border-radius: 24px;
+      padding: 1.6rem;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .angebot-card:hover {
+      transform: translateY(-4px);
+      border-color: color-mix(in srgb, var(--accent) 50%, var(--line));
+    }
+
+    .card-icon {
+      font-size: 1.8rem;
+      margin-bottom: 0.9rem;
+      display: inline-block;
+    }
+
+    .card-tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent-strong);
+      font-size: 0.68rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 0.9rem;
+    }
+
+    .card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .card-desc {
+      color: var(--muted);
+      line-height: 1.75;
+      margin-bottom: 1rem;
+      font-size: 0.94rem;
+    }
+
+    .card-list {
+      list-style: none;
+      display: grid;
+      gap: 0.55rem;
+    }
+
+    .card-list li {
+      color: var(--muted);
+      font-size: 0.88rem;
+      padding-left: 1rem;
+      position: relative;
+      line-height: 1.6;
+    }
+
+    .card-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.72rem;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      transform: translateY(-50%);
+    }
+
+    #faq { background: transparent; }
+
+    .faq-list {
+      max-width: 860px;
+      margin: 0 auto;
+      display: grid;
+      gap: 0.9rem;
+    }
+
     .faq-item {
-      background: var(--dark2);
-      border: 1px solid rgba(255,255,255,0.06);
-      border-radius: 4px;
+      border-radius: 22px;
       overflow: hidden;
-      transition: border-color 0.3s;
     }
-    .faq-item.open { border-color: rgba(201,168,76,0.3); }
+
     .faq-question {
       width: 100%;
-      background: none;
       border: none;
-      padding: 1.4rem 1.8rem;
+      background: transparent;
+      padding: 1.2rem 1.25rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 1rem;
       cursor: pointer;
       text-align: left;
+      color: var(--text);
     }
+
     .faq-question span {
-      font-size: 0.97rem;
-      color: var(--white);
       font-weight: 500;
-      line-height: 1.4;
+      line-height: 1.5;
+      font-size: 0.98rem;
     }
+
     .faq-icon {
-      width: 28px;
-      height: 28px;
+      width: 32px;
+      height: 32px;
       border-radius: 50%;
-      border: 1px solid rgba(201,168,76,0.3);
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--line);
+      color: var(--accent);
       flex-shrink: 0;
-      color: var(--gold);
-      font-size: 1.2rem;
-      line-height: 1;
-      transition: transform 0.3s;
+      transition: transform 0.2s ease;
     }
+
     .faq-item.open .faq-icon { transform: rotate(45deg); }
+
     .faq-answer {
       max-height: 0;
       overflow: hidden;
-      transition: max-height 0.4s ease, padding 0.3s;
-      padding: 0 1.8rem;
+      transition: max-height 0.25s ease, padding 0.25s ease;
+      padding: 0 1.25rem;
     }
-    .faq-item.open .faq-answer { max-height: 300px; padding: 0 1.8rem 1.4rem; }
-    .faq-answer p { color: var(--text-muted); font-size: 0.92rem; line-height: 1.8; }
 
-    #kontakt { background: radial-gradient(ellipse at 50% 0%, #1a1428 0%, var(--dark) 70%); text-align: center; }
-    .kontakt-inner { max-width: 680px; margin: 0 auto; }
+    .faq-item.open .faq-answer {
+      max-height: 220px;
+      padding: 0 1.25rem 1.2rem;
+    }
+
+    .faq-answer p {
+      color: var(--muted);
+      line-height: 1.75;
+      font-size: 0.94rem;
+    }
+
+    #kontakt { background: transparent; }
+
+    .contact-shell {
+      max-width: 980px;
+      margin: 0 auto;
+      border-radius: 28px;
+      padding: 2rem;
+    }
+
     .kontakt-form {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 1.2rem;
-      margin-top: 3rem;
+      gap: 1rem;
+      margin-top: 2rem;
       text-align: left;
     }
-    .form-group { display: flex; flex-direction: column; gap: 0.5rem; }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+
     .form-group.full { grid-column: 1 / -1; }
-    .form-group label { font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); }
+
+    .form-group label {
+      color: var(--muted);
+      font-size: 0.74rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
     .form-group input,
     .form-group select,
     .form-group textarea {
-      background: var(--dark2);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 2px;
-      padding: 0.85rem 1rem;
+      width: 100%;
+      min-height: 50px;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      background: var(--bg-card);
       color: var(--text);
-      font-family: 'Inter', sans-serif;
-      font-size: 0.9rem;
+      font-family: inherit;
+      font-size: 0.95rem;
+      padding: 0.9rem 1rem;
       outline: none;
-      transition: border-color 0.3s;
+      transition: border-color 0.2s ease, background 0.2s ease;
       -webkit-appearance: none;
+      appearance: none;
     }
+
+    .form-group textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
     .form-group input:focus,
     .form-group select:focus,
-    .form-group textarea:focus { border-color: var(--gold); }
-    .form-group textarea { height: 130px; resize: vertical; }
-    .form-group select { appearance: none; cursor: pointer; }
-    .form-group select option { background: var(--dark2); }
-    .form-submit { grid-column: 1 / -1; text-align: center; margin-top: 0.5rem; }
-    .form-note { font-size: 0.78rem; color: var(--text-muted); text-align: center; margin-top: 1rem; grid-column: 1 / -1; }
-    .contact-info {
-      display: flex; justify-content: center; gap: 3rem;
-      margin-top: 4rem; padding-top: 3rem;
-      border-top: 1px solid rgba(255,255,255,0.06);
-      flex-wrap: wrap;
+    .form-group textarea:focus {
+      border-color: var(--accent);
     }
-    .contact-item { text-align: center; }
-    .contact-item .icon { font-size: 1.5rem; margin-bottom: 0.5rem; }
-    .contact-item .ci-label { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); display: block; margin-bottom: 0.3rem; }
-    .contact-item .ci-value { font-size: 0.95rem; color: var(--white); }
+
+    .form-submit {
+      grid-column: 1 / -1;
+      display: flex;
+      justify-content: center;
+      margin-top: 0.4rem;
+    }
+
+    .form-note {
+      grid-column: 1 / -1;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.82rem;
+      margin-top: 0.5rem;
+    }
+
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--line);
+    }
+
+    .contact-item {
+      min-width: 180px;
+      padding: 1rem;
+      border-radius: 18px;
+      background: var(--bg-card);
+      border: 1px solid var(--line);
+      text-align: center;
+    }
+
+    .contact-item .icon { font-size: 1.25rem; margin-bottom: 0.35rem; }
+    .contact-item .ci-label {
+      display: block;
+      color: var(--muted);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 0.25rem;
+    }
+
+    .contact-item .ci-value {
+      color: var(--text);
+      font-size: 0.95rem;
+    }
 
     footer {
-      background: #060608;
-      padding: 2.5rem 4rem;
+      padding: 2rem 3rem 2.5rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      border-top: 1px solid rgba(255,255,255,0.04);
-      flex-wrap: wrap;
       gap: 1rem;
+      flex-wrap: wrap;
+      border-top: 1px solid var(--line);
+      margin-top: 1rem;
     }
-    .footer-logo { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--gold); }
-    .footer-copy { font-size: 0.78rem; color: var(--text-muted); }
-    .footer-links { display: flex; gap: 1.5rem; }
-    .footer-links a { font-size: 0.78rem; color: var(--text-muted); text-decoration: none; transition: color 0.3s; }
-    .footer-links a:hover { color: var(--gold); }
+
+    .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+    }
+
+    .footer-copy,
+    .footer-links a {
+      color: var(--muted);
+      font-size: 0.82rem;
+      text-decoration: none;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a:hover { color: var(--accent); }
 
     .fade-in {
       opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
+      transform: translateY(22px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
     }
-    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
     .cursor-glow {
       position: fixed;
-      width: 300px;
-      height: 300px;
+      width: 260px;
+      height: 260px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(201,168,76,0.06) 0%, transparent 70%);
       pointer-events: none;
       z-index: 0;
       transform: translate(-50%, -50%);
-      transition: top 0.1s, left 0.1s;
+      background: radial-gradient(circle, color-mix(in srgb, var(--accent) 12%, transparent) 0%, transparent 70%);
+      transition: top 0.08s linear, left 0.08s linear, opacity 0.25s ease;
+      opacity: 0.7;
     }
 
     @media (max-width: 1024px) {
-      nav { padding: 1.2rem 2rem; }
-      section { padding: 5rem 2rem; }
-      .angebote-grid { grid-template-columns: 1fr 1fr; }
-      #about { gap: 3rem; padding: 4rem 2rem; }
+      nav, section, footer { padding-left: 2rem; padding-right: 2rem; }
+      #about { grid-template-columns: 1fr; gap: 2rem; }
+      .angebote-grid { grid-template-columns: 1fr; }
+      .angebote-extra { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 768px) {
-      nav { padding: 1rem 1.25rem; }
-      .nav-links { display: none; }
-      .nav-cta { display: none; }
-      .hamburger { display: flex; }
-      section { padding: 4rem 1.25rem; }
-      #about {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
-        padding: 4rem 1.25rem;
-      }
-      .about-visual { height: 300px; }
-      .about-badge { right: 0; bottom: 1rem; }
-      .about-frame-border { display: none; }
-      .about-text h2 { font-size: 2rem; }
-      .about-stats { grid-template-columns: 1fr 1fr 1fr; gap: 1rem; }
-      .stat-item .num { font-size: 1.5rem; }
-      .angebote-grid { grid-template-columns: 1fr; }
-      .angebote-extra { grid-template-columns: 1fr !important; }
+      nav { padding: 0.9rem 1.2rem; }
+      section { padding: 4.5rem 1.2rem; }
+      footer { padding: 1.8rem 1.2rem 2.2rem; flex-direction: column; text-align: center; }
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: inline-block; }
+      .hero-title { font-size: clamp(2.6rem, 12vw, 4rem); }
+      .hero-actions { flex-direction: column; align-items: center; }
+      .btn-primary, .btn-secondary { width: 100%; max-width: 290px; }
+      .about-card { min-height: 320px; }
+      .about-stats { grid-template-columns: 1fr 1fr; }
       .kontakt-form { grid-template-columns: 1fr; }
-      .form-group.full { grid-column: 1; }
-      .form-submit { grid-column: 1; }
-      .form-note { grid-column: 1; }
-      footer { flex-direction: column; text-align: center; padding: 2rem 1.25rem; }
-      .footer-links { justify-content: center; }
-      .hero-desc { font-size: 0.95rem; }
-      .hero-scroll { display: none; }
-      .contact-info { gap: 2rem; }
+      .form-group.full, .form-submit, .form-note { grid-column: 1; }
       .cursor-glow { display: none; }
     }
 
-    @media (max-width: 480px) {
-      .about-stats { grid-template-columns: 1fr 1fr; }
-      .hero-btns { flex-direction: column; align-items: center; }
-      .btn-primary, .btn-secondary { width: 100%; max-width: 280px; text-align: center; }
-      .faq-question span { font-size: 0.9rem; }
+    @media (max-width: 520px) {
+      .about-stats { grid-template-columns: 1fr; }
+      .contact-item { width: 100%; }
+      .section-sub { margin-bottom: 2.25rem; }
     }
   </style>
 </head>
@@ -711,20 +867,25 @@
   <div class="cursor-glow" id="cursorGlow"></div>
 
   <div class="mobile-menu" id="mobileMenu">
-    <a href="#about" onclick="closeMenu()">Über mich</a>
-    <a href="#angebote" onclick="closeMenu()">Angebote</a>
-    <a href="#faq" onclick="closeMenu()">FAQ</a>
-    <a href="#kontakt" onclick="closeMenu()" class="mobile-cta">Jetzt anfragen</a>
+    <div class="mobile-menu-inner">
+      <a href="#about" onclick="closeMenu()">Über mich</a>
+      <a href="#angebote" onclick="closeMenu()">Leistungen</a>
+      <a href="#faq" onclick="closeMenu()">FAQ</a>
+      <a href="#kontakt" onclick="closeMenu()">Kontakt</a>
+    </div>
   </div>
 
   <nav id="navbar">
-    <a href="#hero" class="nav-logo">Max <span>Musterzauberer</span></a>
+    <a href="#hero" class="nav-logo">Dominik <span>Lohmar</span></a>
+
     <ul class="nav-links">
       <li><a href="#about">Über mich</a></li>
-      <li><a href="#angebote">Angebote</a></li>
+      <li><a href="#angebote">Leistungen</a></li>
       <li><a href="#faq">FAQ</a></li>
     </ul>
+
     <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Hell-Dunkel-Modus wechseln">☀️</button>
       <a href="#kontakt" class="nav-cta">Anfragen</a>
       <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menü öffnen">
         <span></span>
@@ -738,278 +899,225 @@
     <div class="hero-particles" id="particles"></div>
     <div class="hero-lines"></div>
     <div class="hero-content">
-      <span class="hero-eyebrow">✦ Magie & Mentalismus ✦</span>
-      <h1 class="hero-title">
-        <span class="italic gold">Max</span><br>Musterzauberer
-      </h1>
-      <p class="hero-sub">Zauberer & Mentalist</p>
-      <p class="hero-desc">
-        Wo Logik endet, beginnt das Staunen. Max Musterzauberer verbindet moderne Zauberkunst
-        mit psychologischer Tiefe – für Momente, die Ihre Gäste noch lange beschäftigen werden.
+      <span class="hero-eyebrow">Magie & Mentalismus</span>
+      <h1 class="hero-title">Dominik <span class="accent">Lohmar</span></h1>
+      <p class="hero-sub">
+        Moderner Zauberer und Mentalist für Firmenfeiern, Hochzeiten und besondere Events – stilvoll, nahbar und mit Momenten, die im Kopf bleiben.
       </p>
-      <div class="hero-btns">
+      <div class="hero-actions">
         <a href="#kontakt" class="btn-primary">Jetzt anfragen</a>
-        <a href="#angebote" class="btn-secondary">Leistungen entdecken</a>
+        <a href="#angebote" class="btn-secondary">Leistungen ansehen</a>
       </div>
-    </div>
-    <div class="hero-scroll">
-      <div class="scroll-line"></div>
-      Scroll
     </div>
   </section>
 
   <section id="about">
-    <div class="about-visual fade-in">
-      <div class="about-img-frame">
-        <div style="text-align:center;display:flex;flex-direction:column;align-items:center;gap:1.2rem;padding:2rem;">
-          <div style="width:110px;height:110px;border-radius:50%;background:linear-gradient(135deg,#2a1f40,#1a1428);border:2px solid rgba(201,168,76,0.4);display:flex;align-items:center;justify-content:center;font-size:3rem;">🎩</div>
-          <div>
-            <div style="font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--white);">Max Musterzauberer</div>
-            <div style="font-size:0.75rem;color:var(--gold);letter-spacing:0.15em;text-transform:uppercase;margin-top:0.2rem;">Zauberer & Mentalist</div>
-          </div>
-          <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;margin-top:0.5rem;">
-            <div style="text-align:center;padding:0.8rem 1.2rem;background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.2);border-radius:3px;">
-              <div style="font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--gold);">★★★★★</div>
-              <div style="font-size:0.65rem;color:var(--text-muted);letter-spacing:0.1em;text-transform:uppercase;">Google Reviews</div>
-            </div>
-            <div style="text-align:center;padding:0.8rem 1.2rem;background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.2);border-radius:3px;">
-              <div style="font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--gold);">DEA</div>
-              <div style="font-size:0.65rem;color:var(--text-muted);letter-spacing:0.1em;text-transform:uppercase;">Mitglied</div>
-            </div>
-          </div>
+    <div class="about-card fade-in">
+      <div class="about-visual-inner">
+        <div class="about-icon">🎩</div>
+        <div>
+          <div style="font-family:'Playfair Display',serif;font-size:1.4rem;">Dominik Lohmar</div>
+          <div style="color:var(--muted);margin-top:0.3rem;">Zauberer & Mentalist</div>
+        </div>
+        <div class="about-mini">
+          <span class="mini-badge">Close-Up</span>
+          <span class="mini-badge">Parlour</span>
+          <span class="mini-badge">Bühne</span>
         </div>
       </div>
-      <div class="about-badge">
-        <span class="num">15+</span>
-        <span class="label">Jahre<br>Erfahrung</span>
-      </div>
-      <div class="about-frame-border"></div>
     </div>
+
     <div class="about-text fade-in">
-      <p class="eyebrow">✦ Über Max Musterzauberer</p>
-      <h2>Magie, die <em>berührt</em> —<br>nicht nur überrascht</h2>
+      <p class="eyebrow">Über Dominik Lohmar</p>
+      <h2>Magie, die elegant wirkt und nahbar bleibt</h2>
       <p>
-        Max Musterzauberer ist kein gewöhnlicher Zauberer. Nach über 15 Jahren auf den Bühnen Europas,
-        in Luxushotels, auf Firmenevents und bei exklusiven Privatfeiern hat er eine ganz eigene
-        Handschrift entwickelt: präzise, elegant, psychologisch.
+        Dominik Lohmar steht für moderne Zauberkunst mit klarer, stilvoller Wirkung. Kein lauter Klamauk, sondern starke Momente direkt bei den Gästen – persönlich, überraschend und professionell.
       </p>
       <p>
-        Als ausgebildeter Psychologe und Mitglied der Deutschen Entfesselungskünstler- und
-        Zauberkünstler-Vereinigung (DEA) verbindet er klassische Zauberkunst mit modernem
-        Mentalismus — und schafft damit Erlebnisse, die noch Tage danach nachwirken.
-      </p>
-      <p>
-        Ob der Moment, wenn eine Karte mitten in einer versiegelten Flasche erscheint,
-        oder wenn er den Geburtstag eines fremden Gastes errät — Max macht das Unmögliche
-        spürbar nah.
+        Ob Firmenfeier, Hochzeit oder privates Event: Das Programm passt sich dem Anlass, der Stimmung und der Gästezahl an. So entsteht Unterhaltung, die hochwertig wirkt und zugleich leicht zugänglich bleibt.
       </p>
       <div class="about-stats">
         <div class="stat-item">
-          <span class="num">400+</span>
-          <span class="label">Events pro Jahr</span>
+          <span class="num">Close-Up</span>
+          <span class="label">direkt am Gast</span>
         </div>
         <div class="stat-item">
-          <span class="num">98%</span>
-          <span class="label">Weitempfehlungen</span>
+          <span class="num">Parlour</span>
+          <span class="label">für Gruppen</span>
         </div>
         <div class="stat-item">
-          <span class="num">12</span>
-          <span class="label">Länder bereist</span>
+          <span class="num">Bühne</span>
+          <span class="label">für größere Events</span>
         </div>
       </div>
     </div>
   </section>
 
   <section id="angebote">
-    <p class="section-eyebrow">✦ Leistungen</p>
-    <h2 class="section-title">Das richtige Format<br>für jeden Anlass</h2>
-    <p class="section-sub">Von der intimen Tischrunde bis zur großen Bühne — Max Musterzauberer passt sich perfekt Ihrer Veranstaltung an.</p>
+    <p class="section-eyebrow">Leistungen</p>
+    <h2 class="section-title">Das passende Format für jeden Anlass</h2>
+    <p class="section-sub">
+      Schlank, klar und flexibel aufgebaut – von naher Tischzauberei bis zur größeren Show für Firmenfeiern, Hochzeiten und besondere Abende.
+    </p>
+
     <div class="angebote-grid">
       <div class="angebot-card fade-in">
         <span class="card-icon">🃏</span>
-        <span class="card-tag">Besonders beliebt</span>
+        <span class="card-tag">Beliebt</span>
         <h3 class="card-title">Close-Up Magic</h3>
-        <p class="card-desc">Das Herzstück der modernen Zauberkunst: Magie hautnah, in Ihren Händen, an Ihrem Tisch. Gäste werden zu Teilnehmern — nicht zu Zuschauern.</p>
+        <p class="card-desc">Magie direkt vor den Augen Ihrer Gäste – ideal für Empfang, Dinner oder lockere Gesprächssituationen.</p>
         <ul class="card-list">
-          <li>Empfangsbegleitung & Tischrunden</li>
-          <li>Karten-, Münz- & Alltagsobjekte</li>
-          <li>Ideal für 2–8 Personen gleichzeitig</li>
-          <li>Personalisierbar (Namen, Firmenlogo)</li>
-          <li>Gehobene Atmosphäre ohne Bühne</li>
+          <li>Direkt am Tisch oder im Publikum</li>
+          <li>Persönlich, nah und interaktiv</li>
+          <li>Perfekt für Firmenfeiern und Hochzeiten</li>
         </ul>
       </div>
-      <div class="angebot-card featured fade-in">
+
+      <div class="angebot-card fade-in">
         <span class="card-icon">🎭</span>
-        <span class="card-tag">Highlight</span>
+        <span class="card-tag">Flexibel</span>
         <h3 class="card-title">Parlour Show</h3>
-        <p class="card-desc">Die goldene Mitte: eine kompakte Show für 20–80 Personen, interaktiv und mitreißend. Perfekt für Firmenfeiern, Jubiläen und Hochzeiten.</p>
+        <p class="card-desc">Ein kompaktes Showformat für Gruppen – mit klaren Bildern, direkter Interaktion und starker Wirkung.</p>
         <ul class="card-list">
-          <li>30–60 Minuten Showprogramm</li>
-          <li>Starke Mentalismusnummern</li>
-          <li>Interaktion mit dem Publikum</li>
-          <li>Ohne großes technisches Equipment</li>
-          <li>Kein Podium nötig – flexibel adaptierbar</li>
+          <li>Ideal für 20 bis 80 Gäste</li>
+          <li>Gut planbar ohne großen Aufwand</li>
+          <li>Stilvoll und publikumsnah</li>
         </ul>
       </div>
+
       <div class="angebot-card fade-in">
         <span class="card-icon">✨</span>
-        <span class="card-tag">Grand Scale</span>
+        <span class="card-tag">Größer gedacht</span>
         <h3 class="card-title">Bühnenshow</h3>
-        <p class="card-desc">Großes Kino: eine vollständige Bühnenproduktion mit Licht, Sound und Effekten. Max Musterzauberer als Headliner Ihres Abends — unvergesslich.</p>
+        <p class="card-desc">Für größere Events und besondere Abende – mit modernem Auftritt, klarer Dramaturgie und professioneller Wirkung.</p>
         <ul class="card-list">
-          <li>60–90 Minuten Vollprogramm</li>
-          <li>Illusionen & Großillusionen</li>
-          <li>Professionelles Technik-Rider</li>
-          <li>Für 80–1.000+ Gäste</li>
-          <li>Eigene Ton- & Lichttechnik optional</li>
+          <li>Für größere Gästezahlen geeignet</li>
+          <li>Passend für Gala, Bühne oder Eventfläche</li>
+          <li>Professionell abgestimmt auf Anlass und Rahmen</li>
         </ul>
       </div>
     </div>
-    <div style="max-width:1100px;margin:2rem auto 0;display:grid;grid-template-columns:1fr 1fr;gap:2rem;" class="angebote-extra">
-      <div class="angebot-card fade-in" style="display:flex;align-items:flex-start;gap:1.5rem;">
-        <span style="font-size:2rem;flex-shrink:0;">💍</span>
-        <div>
-          <span class="card-tag">Hochzeiten</span>
-          <h3 class="card-title" style="font-size:1.2rem;">Hochzeitsmagie</h3>
-          <p class="card-desc" style="margin-bottom:0;">Vom Sektempfang bis zur After-Party — Close-Up-Magie und emotionale Mentalismusnummern speziell für das schönste Fest Ihres Lebens.</p>
-        </div>
+
+    <div class="angebote-extra">
+      <div class="angebot-card fade-in">
+        <span class="card-tag">Hochzeiten</span>
+        <h3 class="card-title">Zauberkunst für Hochzeiten</h3>
+        <p class="card-desc">Ideal für Empfang, Dinner oder den Übergang zwischen Programmpunkten – stilvoll, leicht und mit viel Nähe zu den Gästen.</p>
       </div>
-      <div class="angebot-card fade-in" style="display:flex;align-items:flex-start;gap:1.5rem;">
-        <span style="font-size:2rem;flex-shrink:0;">🏢</span>
-        <div>
-          <span class="card-tag">Firmen</span>
-          <h3 class="card-title" style="font-size:1.2rem;">Corporate Magic</h3>
-          <p class="card-desc" style="margin-bottom:0;">Magie als Kommunikationsmittel: Produktlaunches, Teamevents, Jubiläen. Inhalte lassen sich mit Unternehmensbotschaften verknüpfen.</p>
-        </div>
+
+      <div class="angebot-card fade-in">
+        <span class="card-tag">Firmenfeiern</span>
+        <h3 class="card-title">Zauberkunst für Business-Events</h3>
+        <p class="card-desc">Perfekt für Kundenevents, Jubiläen, Weihnachtsfeiern und Teamevents – professionell, elegant und unterhaltsam.</p>
       </div>
     </div>
   </section>
 
   <section id="faq">
-    <p class="section-eyebrow">✦ Häufige Fragen</p>
-    <h2 class="section-title">Antworten auf Ihre<br>wichtigsten Fragen</h2>
-    <p class="section-sub">Noch unsicher? Hier finden Sie die Antworten auf die häufigsten Fragen rund um eine Buchung.</p>
+    <p class="section-eyebrow">FAQ</p>
+    <h2 class="section-title">Häufige Fragen kurz beantwortet</h2>
+    <p class="section-sub">
+      Damit die Seite schlank bleibt, nur die wichtigsten Fragen – kompakt und übersichtlich.
+    </p>
+
     <div class="faq-list">
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
-          <span>Wie weit im Voraus sollte ich buchen?</span>
+          <span>Für welche Events ist das Programm geeignet?</span>
           <div class="faq-icon">+</div>
         </button>
         <div class="faq-answer">
-          <p>Für Firmenfeiern und Hochzeiten empfehle ich eine Buchung mindestens 3–6 Monate im Voraus, da beliebte Termine schnell vergeben sind. Für kleinere Events ist manchmal auch kurzfristig noch etwas möglich — einfach anfragen!</p>
+          <p>Für Firmenfeiern, Hochzeiten, private Feiern und besondere Anlässe. Je nach Rahmen eignet sich Close-Up, Parlour oder eine größere Bühnenshow.</p>
         </div>
       </div>
+
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
           <span>Wie weit reisen Sie an?</span>
           <div class="faq-icon">+</div>
         </button>
         <div class="faq-answer">
-          <p>Ich bin bundesweit im Einsatz — von Hamburg bis München, von Köln bis Berlin. Anfahrtskosten werden transparent nach Distanz berechnet. Internationale Auftritte sind auf Anfrage ebenfalls möglich.</p>
+          <p>Dominik Lohmar ist bundesweit buchbar. Die genaue Planung erfolgt je nach Ort, Datum und Eventformat.</p>
         </div>
       </div>
+
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
-          <span>Was benötigen Sie vor Ort?</span>
+          <span>Was wird vor Ort benötigt?</span>
           <div class="faq-icon">+</div>
         </button>
         <div class="faq-answer">
-          <p>Für Close-Up Magic brauche ich gar nichts außer Ihren Gästen. Für Parlour Shows reicht ein freier Bereich von ca. 3x3 Metern. Für Bühnenshows gibt es einen genauen technischen Rider — den besprechen wir im Vorfeld gemeinsam.</p>
+          <p>Für Close-Up meist fast nichts. Für Showformate genügt in vielen Fällen ein passender freier Bereich. Alles Weitere wird im Vorfeld unkompliziert abgestimmt.</p>
         </div>
       </div>
+
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
-          <span>Gibt es eine Mindestbuchungsdauer?</span>
+          <span>Wie läuft eine Anfrage ab?</span>
           <div class="faq-icon">+</div>
         </button>
         <div class="faq-answer">
-          <p>Für Close-Up Magic liegt das Minimum bei 1,5 Stunden — das ist die Mindestzeit, damit alle Gäste hautnah in den Genuss kommen. Parlour- und Bühnenshows werden als Komplettpaket gebucht.</p>
-        </div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">
-          <span>Ist das Programm für alle Altersgruppen geeignet?</span>
-          <div class="faq-icon">+</div>
-        </button>
-        <div class="faq-answer">
-          <p>Ja — mein Programm richtet sich an Erwachsene und ist für gemischte Gruppen ab ca. 16 Jahren konzipiert. Es ist anspruchsvoll, witzig und niemals kindlich. Kinder-Geburtstage sind nicht mein Spezialgebiet.</p>
-        </div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">
-          <span>Kann das Programm auf unser Unternehmen oder Thema zugeschnitten werden?</span>
-          <div class="faq-icon">+</div>
-        </button>
-        <div class="faq-answer">
-          <p>Absolut. Für Firmenkunden integriere ich gerne Produkte, Markenbotschaften oder interne Jokes in die Show. Das macht den Auftritt besonders und sorgt für echte Aha-Momente, die im Gedächtnis bleiben.</p>
-        </div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">
-          <span>Was kostet eine Buchung ungefähr?</span>
-          <div class="faq-icon">+</div>
-        </button>
-        <div class="faq-answer">
-          <p>Die Preise richten sich nach Format, Dauer und Aufwand. Close-Up Magic beginnt ab ca. 800 EUR, Parlour Shows ab ca. 1.500 EUR, Bühnenshows ab ca. 3.000 EUR. Für ein genaues Angebot einfach anfragen — ich antworte persönlich.</p>
+          <p>Einfach kurz Anlass, Ort und ungefähre Gästezahl senden. Danach folgt eine persönliche Rückmeldung mit passender Empfehlung.</p>
         </div>
       </div>
     </div>
   </section>
 
   <section id="kontakt">
-    <div class="kontakt-inner">
-      <p class="section-eyebrow">✦ Kontakt</p>
-      <h2 class="section-title">Bereit für<br>das Unmögliche?</h2>
-      <p class="section-sub">Erzählen Sie mir von Ihrem Event. Ich melde mich innerhalb von 24 Stunden mit einem persönlichen Angebot zurück.</p>
-      <div class="gold-divider"></div>
+    <div class="contact-shell fade-in">
+      <p class="section-eyebrow">Kontakt</p>
+      <h2 class="section-title">Unverbindlich anfragen</h2>
+      <p class="section-sub">
+        Senden Sie kurz die wichtigsten Eckdaten – Anlass, Ort und Gästezahl. Danach folgt eine persönliche Rückmeldung.
+      </p>
+
       <form class="kontakt-form" onsubmit="handleSubmit(event)">
         <div class="form-group">
           <label>Vorname</label>
-          <input type="text" placeholder="Max" />
+          <input type="text" placeholder="Vorname" />
         </div>
         <div class="form-group">
           <label>Nachname</label>
-          <input type="text" placeholder="Mustermann" />
+          <input type="text" placeholder="Nachname" />
         </div>
         <div class="form-group">
           <label>E-Mail</label>
-          <input type="email" placeholder="max@beispiel.de" />
+          <input type="email" placeholder="name@beispiel.de" />
         </div>
         <div class="form-group">
           <label>Telefon</label>
-          <input type="tel" placeholder="+49 170 1234567" />
+          <input type="tel" placeholder="+49 ..." />
         </div>
         <div class="form-group">
-          <label>Art des Events</label>
+          <label>Eventart</label>
           <select>
-            <option value="">Bitte wählen ...</option>
-            <option>Firmenfeier / Corporate Event</option>
+            <option value="">Bitte wählen</option>
+            <option>Firmenfeier</option>
             <option>Hochzeit</option>
-            <option>Geburtstagsfeier</option>
-            <option>Produktlaunch</option>
+            <option>Privates Event</option>
             <option>Sonstiges</option>
           </select>
         </div>
         <div class="form-group">
-          <label>Gewünschtes Format</label>
+          <label>Format</label>
           <select>
-            <option value="">Bitte wählen ...</option>
+            <option value="">Bitte wählen</option>
             <option>Close-Up Magic</option>
             <option>Parlour Show</option>
             <option>Bühnenshow</option>
-            <option>Kombination</option>
-            <option>Noch offen / Beratung gewünscht</option>
+            <option>Beratung gewünscht</option>
           </select>
         </div>
         <div class="form-group full">
-          <label>Ihre Nachricht</label>
-          <textarea placeholder="Datum des Events, Ort, Gästezahl, besondere Wünsche ..."></textarea>
+          <label>Nachricht</label>
+          <textarea placeholder="Datum, Ort, Gästezahl und kurze Infos zum Event ..."></textarea>
         </div>
         <div class="form-submit">
-          <button type="submit" class="btn-primary">Anfrage absenden ✦</button>
+          <button type="submit" class="btn-primary">Anfrage senden</button>
         </div>
-        <p class="form-note">Ich antworte persönlich — kein automatisierter Massenversand.</p>
+        <p class="form-note">Persönliche Rückmeldung statt Massenmail.</p>
       </form>
+
       <div class="contact-info">
         <div class="contact-item">
           <div class="icon">📞</div>
@@ -1019,7 +1127,7 @@
         <div class="contact-item">
           <div class="icon">✉️</div>
           <span class="ci-label">E-Mail</span>
-          <span class="ci-value">hallo@maxmusterzauberer.de</span>
+          <span class="ci-value">hallo@dominiklohmar.de</span>
         </div>
         <div class="contact-item">
           <div class="icon">📍</div>
@@ -1031,8 +1139,8 @@
   </section>
 
   <footer>
-    <div class="footer-logo">Max Musterzauberer</div>
-    <p class="footer-copy">© 2026 Max Musterzauberer – Zauberer & Mentalist. Alle Rechte vorbehalten.</p>
+    <div class="footer-logo">Dominik Lohmar</div>
+    <p class="footer-copy">© 2026 Dominik Lohmar – Zauberer & Mentalist.</p>
     <div class="footer-links">
       <a href="#">Impressum</a>
       <a href="#">Datenschutz</a>
@@ -1040,19 +1148,40 @@
     </div>
   </footer>
 
-  <div id="modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.85);z-index:999;align-items:center;justify-content:center;padding:1rem;">
-    <div style="background:var(--dark2);border:1px solid rgba(201,168,76,0.3);border-radius:4px;padding:3rem 2rem;text-align:center;max-width:420px;width:100%;">
-      <div style="font-size:3rem;margin-bottom:1rem;">✨</div>
-      <h3 style="font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--white);margin-bottom:1rem;">Vielen Dank!</h3>
-      <p style="color:var(--text-muted);line-height:1.8;margin-bottom:2rem;">Ihre Anfrage ist eingegangen. Max meldet sich persönlich innerhalb von 24 Stunden bei Ihnen.</p>
-      <button onclick="document.getElementById('modal').style.display='none'" class="btn-primary">Schließen</button>
+  <div id="modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.45);z-index:300;align-items:center;justify-content:center;padding:1rem;">
+    <div style="background:var(--bg-soft);border:1px solid var(--line);border-radius:24px;padding:2rem;text-align:center;max-width:420px;width:100%;box-shadow:var(--shadow);">
+      <div style="font-size:2rem;margin-bottom:0.8rem;">✨</div>
+      <h3 style="font-family:'Playfair Display',serif;font-size:1.7rem;margin-bottom:0.8rem;">Vielen Dank</h3>
+      <p style="color:var(--muted);line-height:1.7;margin-bottom:1.4rem;">Die Anfrage wurde übermittelt. Dominik Lohmar meldet sich persönlich zurück.</p>
+      <button onclick="document.getElementById('modal').style.display='none'" class="btn-primary" style="border:none;cursor:pointer;">Schließen</button>
     </div>
   </div>
 
   <script>
+    const body = document.body;
+    const themeToggle = document.getElementById('themeToggle');
+    const savedTheme = window.localStorage ? localStorage.getItem('dl-theme') : null;
+
+    function updateThemeIcon() {
+      themeToggle.textContent = body.classList.contains('light-mode') ? '🌙' : '☀️';
+    }
+
+    if (savedTheme === 'light') {
+      body.classList.add('light-mode');
+    }
+    updateThemeIcon();
+
+    themeToggle.addEventListener('click', () => {
+      body.classList.toggle('light-mode');
+      if (window.localStorage) {
+        localStorage.setItem('dl-theme', body.classList.contains('light-mode') ? 'light' : 'dark');
+      }
+      updateThemeIcon();
+    });
+
     const glow = document.getElementById('cursorGlow');
-    document.addEventListener('mousemove', e => {
-      if (glow) {
+    document.addEventListener('mousemove', (e) => {
+      if (glow && window.innerWidth > 768) {
         glow.style.left = e.clientX + 'px';
         glow.style.top = e.clientY + 'px';
       }
@@ -1060,7 +1189,7 @@
 
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
-      navbar.classList.toggle('scrolled', window.scrollY > 50);
+      navbar.classList.toggle('scrolled', window.scrollY > 24);
     });
 
     const hamburger = document.getElementById('hamburger');
@@ -1085,36 +1214,33 @@
       if (window.innerWidth > 768) closeMenu();
     });
 
-    const container = document.getElementById('particles');
-    for (let i = 0; i < 25; i++) {
+    const particles = document.getElementById('particles');
+    for (let i = 0; i < 18; i++) {
       const p = document.createElement('div');
       p.className = 'particle';
       const size = Math.random() * 3 + 1;
-      p.style.cssText = `
-        width:${size}px;height:${size}px;
-        left:${Math.random()*100}%;
-        animation-duration:${Math.random()*15+10}s;
-        animation-delay:${Math.random()*15}s;
-      `;
-      container.appendChild(p);
+      p.style.width = size + 'px';
+      p.style.height = size + 'px';
+      p.style.left = Math.random() * 100 + '%';
+      p.style.animationDuration = Math.random() * 14 + 10 + 's';
+      p.style.animationDelay = Math.random() * 10 + 's';
+      particles.appendChild(p);
     }
 
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          const siblings = e.target.parentElement.querySelectorAll('.fade-in');
-          siblings.forEach((s, i) => {
-            setTimeout(() => s.classList.add('visible'), i * 100);
-          });
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
         }
       });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
 
     function toggleFaq(btn) {
       const item = btn.closest('.faq-item');
       const isOpen = item.classList.contains('open');
-      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      document.querySelectorAll('.faq-item').forEach((node) => node.classList.remove('open'));
       if (!isOpen) item.classList.add('open');
     }
 
